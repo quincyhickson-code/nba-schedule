@@ -529,40 +529,50 @@ function toggleSavePlayer(playerId, btn) {
   buildPlayersPanel()
 }
 
+/* ── Fetch player stats from most recent game boxscore for their team ── */
+async function fetchPlayerGameStats(playerId, teamId) {
+  const teamGames = [...allGames, ...archiveGames]
+    .filter(g => g.status === 'completed' &&
+      (String(g.home?.id) === String(teamId) || String(g.away?.id) === String(teamId)))
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+
+  for (const game of teamGames.slice(0, 3)) {
+    try {
+      const res  = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event=${game.id}`)
+      const data = await res.json()
+      const labels = data.boxscore?.players?.[0]?.statistics?.[0]?.labels || []
+      for (const team of (data.boxscore?.players || [])) {
+        for (const block of (team.statistics || [])) {
+          const athlete = (block.athletes || []).find(a => String(a.athlete?.id) === String(playerId))
+          if (athlete?.stats?.length) {
+            const opp  = String(game.home?.id) === String(teamId) ? game.away : game.home
+            const date = new Date(game.date).toLocaleDateString('en-US', { month:'short', day:'numeric' })
+            return { labels, stats: athlete.stats, gameLabel: `${date} vs ${opp?.name || ''}` }
+          }
+        }
+      }
+    } catch { /* try next game */ }
+  }
+  return null
+}
+
 /* ── Player profile card ── */
-function openPlayerProfile(playerId, teamAbbrev, teamName) {
+async function openPlayerProfile(playerId, teamAbbrev, teamName) {
   const p = rosterPlayerCache.get(String(playerId))
   if (!p) return
 
-  const photo     = p.headshot?.href || ''
-  const pos       = p.position?.abbreviation || p.position?.displayName || ''
-  const jersey    = p.jersey ? `#${p.jersey}` : ''
-  const age       = p.age ? `Age ${p.age}` : ''
-  const ht        = p.displayHeight || ''
-  const wt        = p.displayWeight || ''
-  const meta      = [ht, wt, age, p.birthPlace?.city ? `${p.birthPlace.city}, ${p.birthPlace?.country || ''}` : ''].filter(Boolean).join(' · ')
-  const isSaved   = prefs.favPlayers.some(fp => fp.id === String(playerId))
-  const abbrev    = teamAbbrev || p._teamAbbrev || ''
+  const photo   = p.headshot?.href || ''
+  const pos     = p.position?.abbreviation || p.position?.displayName || ''
+  const jersey  = p.jersey ? `#${p.jersey}` : ''
+  const age     = p.age ? `Age ${p.age}` : ''
+  const ht      = p.displayHeight || ''
+  const wt      = p.displayWeight || ''
+  const meta    = [ht, wt, age, p.birthPlace?.city ? `${p.birthPlace.city}, ${p.birthPlace?.country || ''}` : ''].filter(Boolean).join(' · ')
+  const isSaved = prefs.favPlayers.some(fp => fp.id === String(playerId))
+  const abbrev  = teamAbbrev || p._teamAbbrev || ''
 
-  // Stats: season averages from ESPN roster response
-  const pts = getStat(p, 'PTS')
-  const reb = getStat(p, 'REB')
-  const ast = getStat(p, 'AST')
-  const stl = getStat(p, 'STL')
-  const blk = getStat(p, 'BLK')
-  const fgp = getStat(p, 'FG%')
-  const tpp = getStat(p, '3P%')
-  const ftp = getStat(p, 'FT%')
-
-  const statsHtml = [
-    { val: pts, lbl: 'PTS' }, { val: reb, lbl: 'REB' }, { val: ast, lbl: 'AST' },
-    { val: stl, lbl: 'STL' }, { val: blk, lbl: 'BLK' }, { val: fgp, lbl: 'FG%' },
-    { val: tpp, lbl: '3P%' }, { val: ftp, lbl: 'FT%' },
-  ].filter(s => s.val !== '—')
-   .map(s => `<div class="pc-stat"><div class="pc-stat-val">${s.val}</div><div class="pc-stat-lbl">${s.lbl}</div></div>`)
-   .join('')
-
-  const card = `
+  // Show card immediately with loading state for stats
+  const cardBase = (statsContent) => `
 <div class="modal" style="max-width:440px">
   <div class="modal-header">
     <button class="btn-outline" onclick="openTeamRoster('${p._teamId}','${abbrev}','${teamName || p._teamName}')">← Roster</button>
@@ -580,7 +590,7 @@ function openPlayerProfile(playerId, teamAbbrev, teamName) {
     <div class="pc-body">
       <div class="pc-name">${p.displayName || p.fullName || 'Unknown'}</div>
       ${meta ? `<div class="pc-meta">${meta}</div>` : ''}
-      ${statsHtml ? `<div class="pc-stats">${statsHtml}</div>` : '<div class="pc-meta">Season stats not available.</div>'}
+      <div id="pc-stats-area">${statsContent}</div>
       <div class="pc-actions">
         <button class="btn-outline" id="pc-save-btn" data-player-id="${playerId}">
           ${isSaved ? '★ Saved' : '☆ Save player'}
@@ -590,13 +600,32 @@ function openPlayerProfile(playerId, teamAbbrev, teamName) {
   </div>
 </div>`
 
-  showModal(card)
+  showModal(cardBase('<div class="pc-meta" style="color:var(--muted)">Loading stats…</div>'))
 
   document.getElementById('pc-save-btn')?.addEventListener('click', function() {
     toggleSavePlayer(playerId, null)
     const saved = prefs.favPlayers.some(fp => fp.id === String(playerId))
     this.textContent = saved ? '★ Saved' : '☆ Save player'
   })
+
+  // Fetch game stats async, then update in place
+  const SHOW = ['PTS','REB','AST','STL','BLK','MIN','+/-','FG','3PT','FT']
+  const gameStats = await fetchPlayerGameStats(playerId, p._teamId)
+  const statsArea = document.getElementById('pc-stats-area')
+  if (!statsArea) return
+
+  if (gameStats) {
+    const statPills = gameStats.labels
+      .map((lbl, i) => ({ lbl, val: gameStats.stats[i] }))
+      .filter(s => SHOW.includes(s.lbl) && s.val && s.val !== '0' && s.val !== '--')
+      .map(s => `<div class="pc-stat"><div class="pc-stat-val">${s.val}</div><div class="pc-stat-lbl">${s.lbl}</div></div>`)
+      .join('')
+    statsArea.innerHTML = statPills
+      ? `<div class="pc-stats">${statPills}</div><div class="pc-meta" style="margin-top:4px">Last game · ${gameStats.gameLabel}</div>`
+      : `<div class="pc-meta">Did not play in last game.</div>`
+  } else {
+    statsArea.innerHTML = '<div class="pc-meta">No recent game stats available.</div>'
+  }
 }
 
 async function ensureRosterCached(teamId, abbrev, teamName) {
