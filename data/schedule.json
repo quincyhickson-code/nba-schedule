@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-06-20T05:09:55.484Z",
+  "range": {
+    "from": "20260606",
+    "to": "20260711"
+  },
+  "errors": [],
+  "games": [
+    {
+      "id": "401859965",
+      "league": "nba",
+      "leagueName": "NBA",
+      "date": "2026-06-09T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "NBA Finals - Game 3",
+      "venue": "Madison Square Garden, New York",
+      "broadcast": "ABC",
+      "home": {
+        "name": "New York Knicks",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+        "id": "18",
+        "score": "111",
+        "record": "53-29",
+        "winner": false
+      },
+      "away": {
+        "name": "San Antonio Spurs",
+        "abbrev": "SA",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+        "id": "24",
+        "score": "115",
+        "record": "62-20",
+        "winner": true
+      },
+      "url": "https://www.espn.com/nba/game/_/gameId/401859965/spurs-knicks"
+    },
+    {
+      "id": "401859966",
+      "league": "nba",
+      "leagueName": "NBA",
+      "date": "2026-06-11T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "NBA Finals - Game 4",
+      "venue": "Madison Square Garden, New York",
+      "broadcast": "ABC",
+      "home": {
+        "name": "New York Knicks",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+        "id": "18",
+        "score": "107",
+        "record": "53-29",
+        "winner": true
+      },
+      "away": {
+        "name": "San Antonio Spurs",
+        "abbrev": "SA",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+        "id": "24",
+        "score": "106",
+        "record": "62-20",
+        "winner": false
+      },
+      "url": "https://www.espn.com/nba/game/_/gameId/401859966/spurs-knicks"
+    },
+    {
+      "id": "401859967",
+      "league": "nba",
+      "leagueName": "NBA",
+      "date": "2026-06-14T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "NBA Finals - Game 5",
+      "venue": "Frost Bank Center, San Antonio",
+      "broadcast": "ABC",
+      "home": {
+        "name": "San Antonio Spurs",
+        "abbrev": "SA",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png",
+        "id": "24",
+        "score": "90",
+        "record": "62-20",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Knicks",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+        "id": "18",
+        "score": "94",
+        "record": "53-29",
+        "winner": true
+      },
+      "url": "https://www.espn.com/nba/game/_/gameId/401859967/knicks-spurs"
+    }
+  ]
+}

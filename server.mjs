@@ -64,10 +64,11 @@ const server = createServer(async (req, res) => {
 
   if (url.pathname === '/data/schedule.json') {
     try {
+      const body = await readFile(DATA_FILE)
       res.writeHead(200, { 'Content-Type': 'application/json' })
-      res.end(await readFile(DATA_FILE))
+      res.end(body)
     } catch {
-      res.writeHead(404, { 'Content-Type': 'application/json' })
+      res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ games: [], generatedAt: null, errors: ['No data yet — click Refresh'] }))
     }
     return
@@ -75,8 +76,9 @@ const server = createServer(async (req, res) => {
 
   if (url.pathname === '/data/changes.json') {
     try {
+      const body = await readFile(CHANGES_FILE)
       res.writeHead(200, { 'Content-Type': 'application/json' })
-      res.end(await readFile(CHANGES_FILE))
+      res.end(body)
     } catch {
       res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ changes: [] }))
@@ -86,8 +88,9 @@ const server = createServer(async (req, res) => {
 
   if (url.pathname === '/data/archive.json') {
     try {
+      const body = await readFile(ARCHIVE_FILE)
       res.writeHead(200, { 'Content-Type': 'application/json' })
-      res.end(await readFile(ARCHIVE_FILE))
+      res.end(body)
     } catch {
       res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ games: [] }))
@@ -99,8 +102,9 @@ const server = createServer(async (req, res) => {
   if (!filePath.startsWith(PUBLIC_DIR)) { res.writeHead(403); res.end('Forbidden'); return }
 
   try {
+    const body = await readFile(filePath)
     res.writeHead(200, { 'Content-Type': MIME[extname(filePath)] || 'application/octet-stream' })
-    res.end(await readFile(filePath))
+    res.end(body)
   } catch {
     res.writeHead(404, { 'Content-Type': 'text/plain' })
     res.end('Not found')
