@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Schedule — Help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.6; background: #111318; color: #d1d5db; padding: 0 0 60px; }
+    .top-bar { background: #161a20; border-bottom: 2px solid #f76b1c; padding: 14px 20px; display: flex; align-items: center; gap: 12px; }
+    .top-bar-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; color: #fff; letter-spacing: 0.3px; }
+    .top-bar a { color: #6b7280; text-decoration: none; font-size: 13px; margin-left: auto; }
+    .top-bar a:hover { color: #9ca3af; }
+    .content { max-width: 680px; margin: 0 auto; padding: 32px 20px 0; }
+    h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; color: #fff; margin-bottom: 6px; }
+    .intro { color: #8a9099; font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #f76b1c; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #2a2e3a; }
+    h2:first-of-type { margin-top: 0; }
+    .card { background: #1a1d24; border: 1px solid #2a2e3a; border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
+    .card-title { font-weight: 600; color: #e5e7eb; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+    .card p { color: #9ca3af; font-size: 14px; }
+    .card p + p { margin-top: 6px; }
+    .tag { display: inline-block; background: #2a2e3a; color: #9ca3af; border-radius: 4px; padding: 1px 6px; font-size: 12px; font-weight: 600; vertical-align: middle; }
+    .tag.orange { background: #2d1a00; color: #f76b1c; }
+    .mobile-box { background: #161a20; border: 1px solid #2a2e3a; border-radius: 10px; padding: 16px 18px; margin-top: 8px; }
+    .mobile-box-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #f76b1c; margin-bottom: 10px; }
+    .mobile-box ul { list-style: none; padding: 0; }
+    .mobile-box ul li { color: #8a9099; font-size: 13px; padding: 4px 0 4px 14px; position: relative; border-bottom: 1px solid #2a2e3a; }
+    .mobile-box ul li:last-child { border-bottom: none; }
+    .mobile-box ul li::before { content: '›'; position: absolute; left: 0; color: #f76b1c; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: #6b7280; text-decoration: none; font-size: 13px; margin-top: 40px; }
+    .back-link:hover { color: #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span class="top-bar-title">NBA Schedule</span>
+    <a href="/">← Back to schedule</a>
+  </div>
+
+  <div class="content">
+    <h1>How to use NBA Schedule</h1>
+    <p class="intro">Spoiler-free NBA game schedule with rosters, player profiles, and saved players. All 30 teams, regular season through playoffs.</p>
+
+    <h2>Getting started</h2>
+
+    <div class="card">
+      <div class="card-title">The schedule</div>
+      <p>Upcoming and live games appear by default, grouped by date. Use the <span class="tag">Conference</span> pills to filter to Eastern or Western Conference games only. Use the <span class="tag">Status</span> pills to show only Upcoming, Live, Final, or Postponed games.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Spoiler control</div>
+      <p>Scores are hidden by default. Toggle <span class="tag">Show scores</span> in the Filters panel whenever you're ready to see them. Scores show for both live and completed games.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Search</div>
+      <p>Type any team name in the search bar to instantly filter the schedule to games featuring that team.</p>
+    </div>
+
+    <h2>My Team &amp; Favorites</h2>
+
+    <div class="card">
+      <div class="card-title">★ Favorite teams</div>
+      <p>Open <span class="tag">★ Favorite teams</span> in filters and tap the star next to any franchise. Favorited teams get a <span class="tag orange">★</span> marker in every game row so you can spot them instantly.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">My Team</div>
+      <p>Once a team is favorited, tap <span class="tag">☆ My Team</span> next to it to set it as yours. The entire app switches to that franchise's colors. Their games get a colored left border and their logo appears in the header.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">★ Saved Players</div>
+      <p>Tap <span class="tag">Roster</span> on any game row to open that team's full roster, then tap any player to see their profile card with season stats. Hit <span class="tag">☆ Save player</span> to add them to your list. Open <span class="tag">★ Players</span> in filters to see all saved players — tap one to pull up their profile card, then tap <span class="tag">← Roster</span> to jump to their team's full roster.</p>
+    </div>
+
+    <h2>Saving games</h2>
+
+    <div class="card">
+      <div class="card-title">★ Star a game</div>
+      <p>Every game row has a <span class="tag orange">★</span> button. Tap it to save that game. Open <span class="tag">★ Saved</span> in filters to see only your saved games.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Mark as watched</div>
+      <p>Completed games show a <span class="tag">○</span> toggle. Tap it to mark the game watched. Enable <span class="tag">Hide watched</span> in filters to clear them from your schedule once you're done.</p>
+    </div>
+
+    <h2>Teams &amp; Rosters</h2>
+
+    <div class="card">
+      <div class="card-title">Teams view</div>
+      <p>Switch to <span class="tag">Teams</span> using the slider at the top of the controls. All 30 franchises appear as a crest grid separated by conference. Tap any crest to open that team's full roster.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Roster button</div>
+      <p>Every team name in the schedule has a <span class="tag">Roster</span> pill next to it. Tap it to open the full roster — players grouped by position (PG / SG / SF / PF / C) with headshots and jersey numbers. The modal also shows the team's next upcoming games. Tap any player to open their profile card with season averages (PTS / REB / AST / STL / BLK / FG% / 3P% / FT%).</p>
+    </div>
+
+    <h2>Time zones &amp; display</h2>
+
+    <div class="card">
+      <div class="card-title">Game times</div>
+      <p>Tip-off times default to your local time zone automatically. Open the <span class="tag">Times shown in</span> dropdown in Filters to lock to a specific zone — useful when traveling.</p>
+    </div>
+
+    <h2>Mobile tips</h2>
+    <div class="mobile-box">
+      <div class="mobile-box-label">On your phone</div>
+      <ul>
+        <li>Tap <strong>Filters</strong> to expand the full control panel — it's collapsed by default on mobile.</li>
+        <li>The <strong>Teams</strong> slider takes you to the full franchise grid — great for browsing without an active game.</li>
+        <li>Add the app to your home screen (Share → Add to Home Screen on iOS) for a full-screen experience.</li>
+        <li>The schedule refreshes every 10 minutes — tap <strong>Refresh</strong> to force an update during live games.</li>
+        <li>All your settings (favorites, My Team, timezone) are saved locally and persist between visits.</li>
+      </ul>
+    </div>
+
+    <a href="/" class="back-link">← Back to schedule</a>
+  </div>
+</body>
+</html>

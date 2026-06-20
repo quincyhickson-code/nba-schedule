@@ -1,0 +1,11 @@
+{
+  "name": "nba-schedule",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Spoiler-free NBA schedule with rosters and player profiles.",
+  "scripts": {
+    "start": "node server.mjs",
+    "scrape": "node scraper.mjs"
+  }
+}
