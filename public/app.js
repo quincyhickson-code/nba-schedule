@@ -36,25 +36,36 @@ const NBA_TEAMS = [
   { abbrev:'SAS', name:'San Antonio Spurs',        conf:'West', c1:'#c4ced4', c2:'#000000', espnId:24 },
 ]
 
-/* ── WNBA teams ── */
+/* ── WNBA teams (abbrevs + espnIds from ESPN API) ── */
 const WNBA_TEAMS = [
   // Eastern Conference
-  { abbrev:'ATL',  name:'Atlanta Dream',          conf:'East', c1:'#c8102e', c2:'#041e42', espnId:6   },
-  { abbrev:'CHI',  name:'Chicago Sky',            conf:'East', c1:'#418fde', c2:'#ffd520', espnId:3   },
-  { abbrev:'CONN', name:'Connecticut Sun',        conf:'East', c1:'#e03a3e', c2:'#0c2340', espnId:7   },
-  { abbrev:'IND',  name:'Indiana Fever',          conf:'East', c1:'#002d62', c2:'#bf5700', espnId:5   },
-  { abbrev:'NY',   name:'New York Liberty',       conf:'East', c1:'#6eceb2', c2:'#000000', espnId:9   },
-  { abbrev:'WAS',  name:'Washington Mystics',     conf:'East', c1:'#e31837', c2:'#002b5c', espnId:14  },
+  { abbrev:'ATL',  name:'Atlanta Dream',           conf:'East', c1:'#c8102e', c2:'#041e42', espnId:20     },
+  { abbrev:'CHI',  name:'Chicago Sky',             conf:'East', c1:'#418fde', c2:'#ffd520', espnId:19     },
+  { abbrev:'CON',  name:'Connecticut Sun',         conf:'East', c1:'#e03a3e', c2:'#0c2340', espnId:18     },
+  { abbrev:'IND',  name:'Indiana Fever',           conf:'East', c1:'#002d62', c2:'#bf5700', espnId:5      },
+  { abbrev:'NY',   name:'New York Liberty',        conf:'East', c1:'#6eceb2', c2:'#000000', espnId:9      },
+  { abbrev:'TOR',  name:'Toronto Tempo',           conf:'East', c1:'#ce1141', c2:'#000000', espnId:131935 },
+  { abbrev:'WSH',  name:'Washington Mystics',      conf:'East', c1:'#e31837', c2:'#002b5c', espnId:16     },
   // Western Conference
-  { abbrev:'DAL',  name:'Dallas Wings',           conf:'West', c1:'#c4d600', c2:'#002b5c', espnId:4   },
-  { abbrev:'LV',   name:'Las Vegas Aces',         conf:'West', c1:'#000000', c2:'#c8102e', espnId:8   },
-  { abbrev:'LA',   name:'Los Angeles Sparks',     conf:'West', c1:'#702f8a', c2:'#ffc72c', espnId:2   },
-  { abbrev:'MIN',  name:'Minnesota Lynx',         conf:'West', c1:'#266092', c2:'#236192', espnId:11  },
-  { abbrev:'PHX',  name:'Phoenix Mercury',        conf:'West', c1:'#201747', c2:'#e56020', espnId:12  },
-  { abbrev:'SEA',  name:'Seattle Storm',          conf:'West', c1:'#2c5234', c2:'#fef200', espnId:13  },
+  { abbrev:'DAL',  name:'Dallas Wings',            conf:'West', c1:'#c4d600', c2:'#002b5c', espnId:3      },
+  { abbrev:'GS',   name:'Golden State Valkyries',  conf:'West', c1:'#1d428a', c2:'#ffc72c', espnId:129689 },
+  { abbrev:'LA',   name:'Los Angeles Sparks',      conf:'West', c1:'#702f8a', c2:'#ffc72c', espnId:6      },
+  { abbrev:'LV',   name:'Las Vegas Aces',          conf:'West', c1:'#000000', c2:'#c8102e', espnId:17     },
+  { abbrev:'MIN',  name:'Minnesota Lynx',          conf:'West', c1:'#266092', c2:'#236192', espnId:8      },
+  { abbrev:'PHX',  name:'Phoenix Mercury',         conf:'West', c1:'#201747', c2:'#e56020', espnId:11     },
+  { abbrev:'POR',  name:'Portland Fire',           conf:'West', c1:'#e03a3e', c2:'#000000', espnId:132052 },
+  { abbrev:'SEA',  name:'Seattle Storm',           conf:'West', c1:'#2c5234', c2:'#fef200', espnId:14     },
 ]
 
 const POSITION_ORDER = ['PG','SG','SF','PF','C','G','F','G-F','F-C','F-G']
+
+/* ── ESPN API abbreviation → internal abbreviation map (NBA only) ── */
+const NBA_ABBREV_MAP = { 'GS':'GSW', 'NO':'NOP', 'NY':'NYK', 'SA':'SAS', 'UTAH':'UTA', 'WSH':'WAS' }
+function normalizeAbbrev(abbrev) {
+  if (!abbrev) return abbrev
+  const up = abbrev.toUpperCase()
+  return (prefs.sport !== 'wnba' ? NBA_ABBREV_MAP[up] : null) || abbrev
+}
 
 /* ── League context helpers ── */
 function currentTeams()  { return prefs.sport === 'wnba' ? WNBA_TEAMS : NBA_TEAMS }
@@ -64,11 +75,13 @@ function logoUrl(abbrev) {
   return `https://a.espncdn.com/i/teamlogos/${league}/500/${abbrev?.toLowerCase()}.png`
 }
 function teamByAbbrev(abbrev) {
-  return currentTeams().find(t => t.abbrev === abbrev?.toUpperCase()) || null
+  const norm = normalizeAbbrev(abbrev)
+  return currentTeams().find(t => t.abbrev === norm?.toUpperCase()) || null
 }
 function teamConf(abbrevOrName) {
+  const norm = normalizeAbbrev(abbrevOrName)
   const t = currentTeams().find(t =>
-    t.abbrev === abbrevOrName?.toUpperCase() ||
+    t.abbrev === norm?.toUpperCase() ||
     t.name.toLowerCase() === abbrevOrName?.toLowerCase()
   )
   return t?.conf || null
@@ -234,8 +247,8 @@ function render() {
     byDay.get(k).push(g)
   }
 
-  const isFavTeam = abbrev => getFavTeams().includes(abbrev)
-  const isMyTeam  = abbrev => abbrev === getMyTeam()
+  const isFavTeam = abbrev => getFavTeams().includes(normalizeAbbrev(abbrev))
+  const isMyTeam  = abbrev => normalizeAbbrev(abbrev) === getMyTeam()
 
   let html = ''
   for (const [, dayGames] of byDay) {
