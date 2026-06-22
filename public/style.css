@@ -42,13 +42,13 @@ body {
   z-index: 100;
 }
 
-.app-brand { display: flex; align-items: center; gap: 10px; }
-.app-logo  { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; }
+.app-brand { display: flex; align-items: center; gap: 14px; }
+.app-logo  { width: 80px; height: 80px; border-radius: 14px; object-fit: cover; mix-blend-mode: luminosity; flex-shrink: 0; }
 
 .brand-text h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 28px;
   color: var(--bright);
   letter-spacing: 0.5px;
   line-height: 1;
@@ -701,7 +701,8 @@ select:focus { border-color: var(--accent); }
 
   .game-card { padding: 8px 10px; gap: 8px; }
   .header { padding: 8px 12px; }
-  .brand-text h1 { font-size: 14px; }
+  .app-logo { width: 52px; height: 52px; border-radius: 10px; }
+  .brand-text h1 { font-size: 16px; }
   .subtitle { display: none; }
   .list { padding: 10px; }
   .venue-tag { display: none; }
