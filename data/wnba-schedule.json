@@ -1,0 +1,5860 @@
+{
+  "generatedAt": "2026-06-22T18:38:08.990Z",
+  "range": {
+    "from": "20260324",
+    "to": "20260713"
+  },
+  "errors": [],
+  "games": [
+    {
+      "id": "401866150",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-25T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ION, Fox 5 New York, Liberty Live",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "91",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "109",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866150/fever-liberty"
+    },
+    {
+      "id": "401867790",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-25T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Viejas Arena, San Diego",
+      "broadcast": "Spectrum Sports Net",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "89",
+        "record": "1-0",
+        "winner": true
+      },
+      "away": {
+        "name": "NIGERIA",
+        "abbrev": "NIGER",
+        "logo": null,
+        "id": "17476",
+        "score": "63",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867790/nigeria-sparks"
+    },
+    {
+      "id": "401866152",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-25T20:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Sanford Pentagon, Sioux Falls",
+      "broadcast": "CW26, Arizona's Family 3TV",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "108",
+        "record": "1-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "104",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866152/sky-mercury"
+    },
+    {
+      "id": "401866513",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-25T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "MNMT, Victory+",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "66",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "77",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866513/lynx-mystics"
+    },
+    {
+      "id": "401866514",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-26T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "KPIX+, CW Seattle",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "78",
+        "record": "1-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "76",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866514/storm-valkyries"
+    },
+    {
+      "id": "401869973",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-27T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "Vegas 34",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "94",
+        "record": "1-0",
+        "winner": true
+      },
+      "away": {
+        "name": "JAPAN",
+        "abbrev": "JPN",
+        "logo": null,
+        "id": "17475",
+        "score": "78",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401869973/japan-aces"
+    },
+    {
+      "id": "401867791",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-28T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "T-Mobile Center, Kansas City",
+      "broadcast": "Victory+",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "88",
+        "record": "2-0",
+        "winner": true
+      },
+      "away": {
+        "name": "NIGERIA",
+        "abbrev": "NIGER",
+        "logo": null,
+        "id": "17476",
+        "score": "79",
+        "record": "0-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867791/nigeria-lynx"
+    },
+    {
+      "id": "401866515",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-29T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "NBATV Canada",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "78",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "83",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866515/sun-tempo"
+    },
+    {
+      "id": "401866517",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-29T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "CW26",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "78",
+        "record": "0-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "87",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866517/dream-sky"
+    },
+    {
+      "id": "401866516",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-30T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "CW Seattle, Fox 12 Plus",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "91",
+        "record": "1-1",
+        "winner": true
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "81",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866516/fire-storm"
+    },
+    {
+      "id": "401867792",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-30T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "Arizona's Family 3TV",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "86",
+        "record": "2-0",
+        "winner": true
+      },
+      "away": {
+        "name": "JAPAN",
+        "abbrev": "JPN",
+        "logo": null,
+        "id": "17475",
+        "score": "60",
+        "record": "0-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867792/japan-mercury"
+    },
+    {
+      "id": "401866518",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-04-30T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "ION",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "80",
+        "record": "1-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "95",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866518/wings-fever"
+    },
+    {
+      "id": "401867793",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-02T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "Victory+, NBATV Canada",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "73",
+        "record": "3-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "66",
+        "record": "0-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867793/tempo-lynx"
+    },
+    {
+      "id": "401867794",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-02T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "MeTV Indianapolis",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "105",
+        "record": "2-1",
+        "winner": true
+      },
+      "away": {
+        "name": "NIGERIA",
+        "abbrev": "NIGER",
+        "logo": null,
+        "id": "17476",
+        "score": "57",
+        "record": "0-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867794/nigeria-fever"
+    },
+    {
+      "id": "401867795",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-03T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": null,
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "72",
+        "record": "1-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "83",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401867795/mystics-dream"
+    },
+    {
+      "id": "401866519",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-03T21:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "ION",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "67",
+        "record": "1-1",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "79",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866519/liberty-sun"
+    },
+    {
+      "id": "401866520",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-03T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moody Center, Austin",
+      "broadcast": "ION",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "101",
+        "record": "2-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "84",
+        "record": "1-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866520/aces-wings"
+    },
+    {
+      "id": "401866521",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-03T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "75",
+        "record": "0-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "85",
+        "record": "2-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401866521/sparks-fire"
+    },
+    {
+      "id": "401856890",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-08T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ION",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "106",
+        "record": "1-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "75",
+        "record": "0-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856890/sun-liberty"
+    },
+    {
+      "id": "401856891",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-08T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "ION, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "65",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "68",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856891/mystics-tempo"
+    },
+    {
+      "id": "401856892",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-09T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "ION",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "80",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "91",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856892/valkyries-storm"
+    },
+    {
+      "id": "401856893",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-09T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "ABC, Disney+",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "104",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "107",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856893/wings-fever"
+    },
+    {
+      "id": "401856894",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-09T19:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "T-Mobile Arena, Las Vegas",
+      "broadcast": "ABC, Disney+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "66",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "99",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856894/mercury-aces"
+    },
+    {
+      "id": "401856899",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-10T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "Atlanta News First, Victory+ ATL, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "90",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "91",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856899/dream-lynx"
+    },
+    {
+      "id": "401856895",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-10T01:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "NBA TV, Fox 12 Plus, CW26",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "83",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "98",
+        "record": "1-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856895/sky-fire"
+    },
+    {
+      "id": "401856896",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-10T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "NBC Sports BO, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "82",
+        "record": "0-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "89",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856896/storm-sun"
+    },
+    {
+      "id": "401856897",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-10T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final/OT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "MNMT, WWOR-TV, Liberty Live",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "93",
+        "record": "1-1",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "98",
+        "record": "2-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856897/liberty-mystics"
+    },
+    {
+      "id": "401856898",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-10T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "USA Net, Spectrum Sports Net, Vegas 34",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "78",
+        "record": "0-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "105",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856898/aces-sparks"
+    },
+    {
+      "id": "401856900",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-11T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "KPIX+, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "95",
+        "record": "2-0",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "79",
+        "record": "1-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856900/mercury-valkyries"
+    },
+    {
+      "id": "401856901",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-13T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "WNBA League Pass, PeachtreeTV, Victory+ ATL, KFAA-TV",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "72",
+        "record": "1-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "77",
+        "record": "2-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856901/dream-wings"
+    },
+    {
+      "id": "401856902",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-13T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "WNBA League Pass, Victory+, Victory+ MIN, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "84",
+        "record": "1-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "88",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856902/lynx-mercury"
+    },
+    {
+      "id": "401856903",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-13T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, WWOR-TV, Liberty Live, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "98",
+        "record": "1-1",
+        "winner": true
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "96",
+        "record": "2-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856903/liberty-fire"
+    },
+    {
+      "id": "401856904",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-13T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, CW Seattle, Prime Video-Seattle, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "86",
+        "record": "1-1",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "73",
+        "record": "1-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856904/storm-tempo"
+    },
+    {
+      "id": "401856905",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-14T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "USA Net, Vegas 34",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "69",
+        "record": "0-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "98",
+        "record": "2-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856905/aces-sun"
+    },
+    {
+      "id": "401856906",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-14T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, CW26, KPIX+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "63",
+        "record": "2-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "69",
+        "record": "2-0",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856906/sky-valkyries"
+    },
+    {
+      "id": "401856907",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-14T02:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "USA Net, Spectrum Sports Net",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "78",
+        "record": "0-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "87",
+        "record": "1-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856907/fever-sparks"
+    },
+    {
+      "id": "401856908",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-15T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "86",
+        "record": "1-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "90",
+        "record": "2-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856908/lynx-wings"
+    },
+    {
+      "id": "401856909",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-15T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "Prime Video, WWOR-TV, Liberty Live",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "82",
+        "record": "1-2",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "100",
+        "record": "3-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856909/liberty-fire"
+    },
+    {
+      "id": "401856910",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-15T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, Vegas 34, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "94",
+        "record": "0-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "101",
+        "record": "3-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856910/aces-sun"
+    },
+    {
+      "id": "401856911",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-15T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final/OT",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "102",
+        "record": "1-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "104",
+        "record": "2-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856911/mystics-fever"
+    },
+    {
+      "id": "401856912",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-16T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "ION, WNBA League Pass, TSN",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "99",
+        "record": "1-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "95",
+        "record": "1-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856912/tempo-sparks"
+    },
+    {
+      "id": "401856913",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-16T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "91",
+        "record": "2-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "83",
+        "record": "2-1",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856913/sky-mercury"
+    },
+    {
+      "id": "401856915",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-17T17:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "State Farm Arena, Atlanta",
+      "broadcast": "NBC, Peacock",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "84",
+        "record": "2-1",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "85",
+        "record": "4-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856915/aces-dream"
+    },
+    {
+      "id": "401856916",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-17T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "Peacock, NBCSN, MeTV Indianapolis, KOMO-TV, Prime Video-Seattle",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "89",
+        "record": "2-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "78",
+        "record": "1-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856916/storm-fever"
+    },
+    {
+      "id": "401856914",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-17T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "WNBA League Pass, CW26, Victory+, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "79",
+        "record": "2-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "86",
+        "record": "3-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856914/sky-lynx"
+    },
+    {
+      "id": "401856917",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-17T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "WNBA League Pass, TSN, Spectrum Sports Net",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "96",
+        "record": "1-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "106",
+        "record": "2-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856917/tempo-sparks"
+    },
+    {
+      "id": "401856918",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-19T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "Peacock, NBCSN, MNMT, KFAA-TV",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "92",
+        "record": "2-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "69",
+        "record": "2-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856918/mystics-wings"
+    },
+    {
+      "id": "401856919",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-19T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, NBC Sports BO, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "83",
+        "record": "2-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "82",
+        "record": "0-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856919/sun-fire"
+    },
+    {
+      "id": "401856920",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-20T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "WNBA League Pass, TSN, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "90",
+        "record": "2-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "98",
+        "record": "3-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856920/tempo-mercury"
+    },
+    {
+      "id": "401856921",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-20T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "USA Net, MeTV Indianapolis, Fox 12 Plus",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "90",
+        "record": "3-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "73",
+        "record": "2-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856921/fire-fever"
+    },
+    {
+      "id": "401856922",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-21T01:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "USA Net, CW26, KFAA-TV",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "89",
+        "record": "3-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "99",
+        "record": "3-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856922/wings-sky"
+    },
+    {
+      "id": "401856923",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-21T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, NBC Sports BO, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "78",
+        "record": "1-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "80",
+        "record": "1-5",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856923/sun-storm"
+    },
+    {
+      "id": "401856924",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-22T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "Prime Video, WWOR-TV, Liberty Live",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "70",
+        "record": "3-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "87",
+        "record": "3-1",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856924/valkyries-liberty"
+    },
+    {
+      "id": "401856925",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-22T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "WNBA League Pass, TSN, Victory+, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "100",
+        "record": "3-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "72",
+        "record": "3-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856925/tempo-lynx"
+    },
+    {
+      "id": "401856926",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-22T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "88",
+        "record": "2-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "97",
+        "record": "2-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856926/sparks-mercury"
+    },
+    {
+      "id": "401856927",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-22T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "86",
+        "record": "3-1",
+        "winner": true
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "69",
+        "record": "3-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856927/wings-dream"
+    },
+    {
+      "id": "401856928",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-22T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "90",
+        "record": "4-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "82",
+        "record": "3-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856928/valkyries-fever"
+    },
+    {
+      "id": "401856929",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-23T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "77",
+        "record": "2-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "59",
+        "record": "1-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856929/sun-storm"
+    },
+    {
+      "id": "401856930",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-23T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "75",
+        "record": "3-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "85",
+        "record": "4-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856930/lynx-sky"
+    },
+    {
+      "id": "401856931",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-23T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, Fox 12 Plus, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "80",
+        "record": "3-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "99",
+        "record": "3-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856931/fire-tempo"
+    },
+    {
+      "id": "401856932",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-24T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "95",
+        "record": "4-2",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "101",
+        "record": "3-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856932/sparks-aces"
+    },
+    {
+      "id": "401856933",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-24T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "WNBA League Pass, Arizona's Family 3TV, Merc+, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "82",
+        "record": "4-1",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "80",
+        "record": "2-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856933/mercury-dream"
+    },
+    {
+      "id": "401856934",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-24T19:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "NBC, Peacock",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "76",
+        "record": "3-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "91",
+        "record": "4-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856934/wings-liberty"
+    },
+    {
+      "id": "401856935",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-24T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, MNMT, KOMO-TV, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "97",
+        "record": "3-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "85",
+        "record": "2-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856935/mystics-storm"
+    },
+    {
+      "id": "401856936",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-26T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "Peacock, NBCSN, Fox 5 New York, Liberty Live, Fox 12 Plus",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "74",
+        "record": "3-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "81",
+        "record": "4-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856936/fire-liberty"
+    },
+    {
+      "id": "401856937",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-26T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, NBC Sports BO, KPIX+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "97",
+        "record": "4-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "70",
+        "record": "1-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856937/sun-valkyries"
+    },
+    {
+      "id": "401856938",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-27T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "USA Net, WWOR-TV, Liberty Live, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "84",
+        "record": "4-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "74",
+        "record": "2-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856938/mercury-liberty"
+    },
+    {
+      "id": "401856939",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-28T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "WNBA League Pass, TSN, CW26",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "104",
+        "record": "3-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "111",
+        "record": "4-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856939/tempo-sky"
+    },
+    {
+      "id": "401856940",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-28T01:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "USA Net, Atlanta News First, Victory+ ATL, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "96",
+        "record": "5-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "81",
+        "record": "4-2",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856940/dream-lynx"
+    },
+    {
+      "id": "401856941",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-28T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, NBC Sports BO, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "71",
+        "record": "5-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "61",
+        "record": "1-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856941/sun-fire"
+    },
+    {
+      "id": "401856942",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-28T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, MNMT, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "64",
+        "record": "3-5",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "78",
+        "record": "3-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856942/mystics-storm"
+    },
+    {
+      "id": "401856943",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-29T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "95",
+        "record": "5-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "87",
+        "record": "4-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856943/aces-wings"
+    },
+    {
+      "id": "401856944",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-29T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "90",
+        "record": "5-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "88",
+        "record": "4-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856944/fever-valkyries"
+    },
+    {
+      "id": "401856945",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-29T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "75",
+        "record": "5-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "68",
+        "record": "2-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856945/mercury-liberty"
+    },
+    {
+      "id": "401856946",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-29T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "87",
+        "record": "3-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "92",
+        "record": "4-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856946/sparks-mystics"
+    },
+    {
+      "id": "401856947",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-29T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "58",
+        "record": "3-5",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "79",
+        "record": "6-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856947/lynx-sky"
+    },
+    {
+      "id": "401856948",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-30T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "66",
+        "record": "5-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "86",
+        "record": "5-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856948/dream-fire"
+    },
+    {
+      "id": "401856949",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-30T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, KOMO-TV, Prime Video-Seattle, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "93",
+        "record": "5-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "72",
+        "record": "3-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856949/storm-tempo"
+    },
+    {
+      "id": "401856950",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-30T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "PeoplesBank Arena, Hartford",
+      "broadcast": "WNBA League Pass, Spectrum Sports Net, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "84",
+        "record": "2-8",
+        "winner": true
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "81",
+        "record": "4-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856950/sparks-sun"
+    },
+    {
+      "id": "401856951",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-31T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "100",
+        "record": "6-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "84",
+        "record": "4-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856951/fever-fire"
+    },
+    {
+      "id": "401856952",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-05-31T19:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "NBC, Peacock",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "81",
+        "record": "5-3",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "91",
+        "record": "5-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856952/aces-valkyries"
+    },
+    {
+      "id": "401856953",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-02T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "USA Net, KFAA-TV, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "79",
+        "record": "6-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "56",
+        "record": "3-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856953/storm-wings"
+    },
+    {
+      "id": "401856954",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-02T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "Peacock, NBCSN, Arizona's Family 3TV, Merc+, Victory+ MIN",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "77",
+        "record": "2-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "111",
+        "record": "7-2",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856954/lynx-mercury"
+    },
+    {
+      "id": "401856955",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-02T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "WNBA League Pass, NBC Sports BO, PeachtreeTV, Victory+ ATL",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "91",
+        "record": "6-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "75",
+        "record": "2-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856955/sun-dream"
+    },
+    {
+      "id": "401856956",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-02T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "WNBA League Pass, CW26, MNMT",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "90",
+        "record": "4-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "72",
+        "record": "3-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856956/sky-mystics"
+    },
+    {
+      "id": "401856957",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-03T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, Fox 12 Plus, KPIX+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "95",
+        "record": "6-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "77",
+        "record": "6-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856957/fire-valkyries"
+    },
+    {
+      "id": "401856958",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-03T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "WNBA League Pass, Vegas 34, Spectrum Sports Net",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "69",
+        "record": "4-5",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "79",
+        "record": "6-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856958/aces-sparks"
+    },
+    {
+      "id": "401856959",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-03T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "USA Net, WWOR-TV, Liberty Live, TSN",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "97",
+        "record": "6-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "82",
+        "record": "5-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856959/tempo-liberty"
+    },
+    {
+      "id": "401856960",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-04T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "USA Net, CW Seattle, Prime Video-Seattle, AZ Family Sports Net, Merc+",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "68",
+        "record": "3-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "72",
+        "record": "3-8",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856960/mercury-storm"
+    },
+    {
+      "id": "401856961",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-04T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "83",
+        "record": "5-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "71",
+        "record": "6-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856961/dream-fever"
+    },
+    {
+      "id": "401856962",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-05T01:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "87",
+        "record": "8-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "84",
+        "record": "6-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856962/valkyries-lynx"
+    },
+    {
+      "id": "401856963",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-05T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "85",
+        "record": "4-6",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "80",
+        "record": "2-10",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856963/sun-sky"
+    },
+    {
+      "id": "401856964",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-06T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "96",
+        "record": "4-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "104",
+        "record": "7-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856964/wings-sparks"
+    },
+    {
+      "id": "401856965",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-06T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Moda Center, Portland",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "72",
+        "record": "6-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "78",
+        "record": "4-8",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856965/mercury-fire"
+    },
+    {
+      "id": "401856966",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-06T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "ABC",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "88",
+        "record": "9-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "68",
+        "record": "3-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856966/storm-lynx"
+    },
+    {
+      "id": "401856967",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-06T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "ABC",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "84",
+        "record": "7-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "79",
+        "record": "6-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856967/valkyries-aces"
+    },
+    {
+      "id": "401856968",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-06T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "WNBA League Pass, MNMT, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "109",
+        "record": "7-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "77",
+        "record": "4-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856968/mystics-dream"
+    },
+    {
+      "id": "401856969",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-07T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "83",
+        "record": "7-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "75",
+        "record": "5-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856969/fever-liberty"
+    },
+    {
+      "id": "401856970",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-07T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, CW26, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "85",
+        "record": "6-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "68",
+        "record": "4-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856970/sky-tempo"
+    },
+    {
+      "id": "401856971",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-07T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "NBA TV, Spectrum Sports Net, Fox 12 Plus",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "89",
+        "record": "5-6",
+        "winner": true
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "72",
+        "record": "6-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856971/fire-sparks"
+    },
+    {
+      "id": "401856972",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-08T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, Fox 5 New York, Liberty Live, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "80",
+        "record": "2-11",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "89",
+        "record": "8-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856972/liberty-sun"
+    },
+    {
+      "id": "401856973",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-08T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "Peacock, NBCSN, MNMT, WTHR Channel 13",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "76",
+        "record": "4-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "78",
+        "record": "6-5",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856973/fever-mystics"
+    },
+    {
+      "id": "401856974",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-09T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "USA Net, Vegas 34, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "101",
+        "record": "8-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "91",
+        "record": "3-10",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856974/storm-aces"
+    },
+    {
+      "id": "401856975",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-09T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "ESPN",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "75",
+        "record": "4-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "82",
+        "record": "8-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856975/dream-sky"
+    },
+    {
+      "id": "401856976",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-10T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "WNBA League Pass, KFAA-TV, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "100",
+        "record": "10-2",
+        "winner": true
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "76",
+        "record": "7-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856976/wings-lynx"
+    },
+    {
+      "id": "401856977",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-10T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, AZ Family Sports Net, Merc+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "87",
+        "record": "7-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "81",
+        "record": "4-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856977/mercury-valkyries"
+    },
+    {
+      "id": "401856978",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-10T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final/OT",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, NBC Sports BO, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "106",
+        "record": "7-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "102",
+        "record": "2-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856978/sun-tempo"
+    },
+    {
+      "id": "401856979",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-11T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "USA Net, CW Seattle, Prime Video-Seattle, Spectrum Sports Net",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "83",
+        "record": "3-11",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "88",
+        "record": "6-6",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856979/sparks-storm"
+    },
+    {
+      "id": "401856980",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-11T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final/OT",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "Prime Video, WTHR Channel 13",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "114",
+        "record": "7-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "106",
+        "record": "4-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856980/sky-fever"
+    },
+    {
+      "id": "401856981",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-11T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "WNBA League Pass, Fox 5 New York, Liberty Live, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "90",
+        "record": "8-4",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "104",
+        "record": "9-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856981/liberty-dream"
+    },
+    {
+      "id": "401856982",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-12T01:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "85",
+        "record": "8-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "70",
+        "record": "4-10",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856982/mercury-wings"
+    },
+    {
+      "id": "401856983",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-12T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, Vegas 34, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "89",
+        "record": "6-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "105",
+        "record": "9-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856983/aces-fire"
+    },
+    {
+      "id": "401856984",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-12T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "ION, WNBA League Pass, TSN",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "86",
+        "record": "5-6",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "85",
+        "record": "7-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856984/tempo-mystics"
+    },
+    {
+      "id": "401856985",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-13T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "72",
+        "record": "3-12",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "76",
+        "record": "8-5",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856985/valkyries-storm"
+    },
+    {
+      "id": "401856986",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-13T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "Peacock, NBCSN, WTHR Channel 13",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "75",
+        "record": "2-13",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "85",
+        "record": "8-5",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856986/fever-sun"
+    },
+    {
+      "id": "401856987",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-14T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "100",
+        "record": "10-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "97",
+        "record": "10-3",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856987/lynx-aces"
+    },
+    {
+      "id": "401856988",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-14T00:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, KFAA-TV, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "84",
+        "record": "7-8",
+        "winner": true
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "83",
+        "record": "8-5",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856988/wings-fire"
+    },
+    {
+      "id": "401856989",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-14T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final/OT",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "WNBA League Pass, Spectrum Sports Net, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "102",
+        "record": "4-11",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "111",
+        "record": "7-6",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856989/sparks-mercury"
+    },
+    {
+      "id": "401856990",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-14T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "NBA TV, MNMT, WWOR-TV, Liberty Live",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "86",
+        "record": "10-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "64",
+        "record": "5-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856990/mystics-liberty"
+    },
+    {
+      "id": "401856991",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-14T19:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "WNBA League Pass, PeachtreeTV, Victory+ ATL, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "77",
+        "record": "7-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "102",
+        "record": "9-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856991/dream-tempo"
+    },
+    {
+      "id": "401856992",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-16T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "USA Net, KFAA-TV, Vegas 34",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "96",
+        "record": "9-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "66",
+        "record": "10-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856992/aces-wings"
+    },
+    {
+      "id": "401856993",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-16T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "WNBA League Pass, Fox 12 Plus, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "107",
+        "record": "11-3",
+        "winner": true
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "74",
+        "record": "7-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856993/fire-lynx"
+    },
+    {
+      "id": "401856994",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-16T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "Peacock, NBCSN, Spectrum Sports Net",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "78",
+        "record": "9-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "58",
+        "record": "7-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856994/sparks-valkyries"
+    },
+    {
+      "id": "401856995",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-16T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "USA Net, MeTV Indianapolis, TSN",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "113",
+        "record": "9-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "91",
+        "record": "7-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856995/tempo-fever"
+    },
+    {
+      "id": "401856996",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-17T23:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, MNMT, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "81",
+        "record": "2-14",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "88",
+        "record": "6-7",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856996/mystics-sun"
+    },
+    {
+      "id": "401856997",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "USA Net, Fox 5 New York, Liberty Live, CW26",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "95",
+        "record": "4-10",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "96",
+        "record": "11-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856997/liberty-sky"
+    },
+    {
+      "id": "401856998",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, KFAA-TV, KPIX+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "91",
+        "record": "10-5",
+        "winner": true
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "80",
+        "record": "9-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856998/wings-valkyries"
+    },
+    {
+      "id": "401856999",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "WNBA League Pass, Victory+ MIN, Spectrum Sports Net",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "83",
+        "record": "7-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "99",
+        "record": "12-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401856999/lynx-sparks"
+    },
+    {
+      "id": "401857000",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "USA Net, CNBC, AZ Family Sports Net, Vegas 34, Merc+",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "76",
+        "record": "4-12",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "86",
+        "record": "11-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857000/aces-mercury"
+    },
+    {
+      "id": "401857001",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "WNBA Commissioner's Cup",
+      "venue": "Moda Center, Portland",
+      "broadcast": "WNBA League Pass, CW Seattle, Prime Video-Seattle, Fox 12 Plus",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "94",
+        "record": "8-9",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "89",
+        "record": "3-13",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857001/storm-fire"
+    },
+    {
+      "id": "401857002",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-18T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "Prime Video, Atlanta News First, Victory+ ATL, WTHR Channel 13",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "101",
+        "record": "9-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "108",
+        "record": "10-4",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857002/dream-fever"
+    },
+    {
+      "id": "401857003",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-19T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, TSN, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "97",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "101",
+        "record": "8-8",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857003/tempo-sun"
+    },
+    {
+      "id": "401857004",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-19T23:30Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "83",
+        "record": "11-5",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "86",
+        "record": "7-7",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857004/mystics-liberty"
+    },
+    {
+      "id": "401857005",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-20T02:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "ION, WNBA League Pass",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "75",
+        "record": "10-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "81",
+        "record": "13-3",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857005/lynx-valkyries"
+    },
+    {
+      "id": "401857006",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-20T17:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "State Farm Arena, Atlanta",
+      "broadcast": "ABC",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "113",
+        "record": "11-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "96",
+        "record": "9-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857006/fever-dream"
+    },
+    {
+      "id": "401857007",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-20T19:07Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "ABC",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "93",
+        "record": "5-12",
+        "winner": true
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "73",
+        "record": "3-14",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857007/storm-mercury"
+    },
+    {
+      "id": "401857008",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-21T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "93",
+        "record": "10-6",
+        "winner": true
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "92",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857008/sky-wings"
+    },
+    {
+      "id": "401857009",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-21T20:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "92",
+        "record": "12-4",
+        "winner": true
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "73",
+        "record": "10-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857009/valkyries-aces"
+    },
+    {
+      "id": "401857010",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-21T22:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "NBA TV, MNMT, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "79",
+        "record": "13-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "84",
+        "record": "8-7",
+        "winner": true
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857010/mystics-lynx"
+    },
+    {
+      "id": "401857011",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-22T00:00Z",
+      "status": "completed",
+      "statusDetail": "Final",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "ESPN, Disney+",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "98",
+        "record": "8-8",
+        "winner": true
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "97",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857011/liberty-sparks"
+    },
+    {
+      "id": "401857012",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-22T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/22 - 7:00 PM EDT",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, CW26, NBC Sports BO",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857012/sky-sun"
+    },
+    {
+      "id": "401857013",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-22T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "6/22 - 7:30 PM EDT",
+      "note": "",
+      "venue": "State Farm Arena, Atlanta",
+      "broadcast": "WNBA League Pass, TSN, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857013/tempo-dream"
+    },
+    {
+      "id": "401857014",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-23T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/22 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "USA Net, WTHR Channel 13, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857014/mercury-fever"
+    },
+    {
+      "id": "401857015",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-23T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/22 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, KFAA-TV, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857015/wings-storm"
+    },
+    {
+      "id": "401857016",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-24T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/23 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "USA Net, WWOR-TV, Liberty Live, Vegas 34",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857016/liberty-aces"
+    },
+    {
+      "id": "401857017",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-24T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "6/24 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "USA Net, WTHR Channel 13, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857017/mercury-fever"
+    },
+    {
+      "id": "401857018",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-24T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "6/24 - 7:30 PM EDT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "WNBA League Pass, Victory+ MIN, MNMT",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857018/lynx-mystics"
+    },
+    {
+      "id": "401857019",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-25T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/24 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "WNBA League Pass, Fox 12 Plus, CW26",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857019/fire-sky"
+    },
+    {
+      "id": "401857020",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-25T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/24 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "USA Net, CNBC, KPIX+, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857020/dream-valkyries"
+    },
+    {
+      "id": "401857021",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-25T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/25 - 7:00 PM EDT",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "Prime Video, Spectrum Sports Net",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857021/sparks-tempo"
+    },
+    {
+      "id": "401857022",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-26T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/25 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "NBA TV, Vegas 34, KFAA-TV",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857022/wings-aces"
+    },
+    {
+      "id": "401857023",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-26T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/25 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, WWOR-TV, Liberty Live, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857023/liberty-storm"
+    },
+    {
+      "id": "401857024",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-26T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "6/26 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "WNBA League Pass, ION",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857024/mystics-sun"
+    },
+    {
+      "id": "401857025",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-26T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "6/26 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Wintrust Arena, Chicago",
+      "broadcast": "WNBA League Pass, ION",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857025/fire-sky"
+    },
+    {
+      "id": "401857026",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-27T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/26 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "WNBA League Pass, ION",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857026/dream-valkyries"
+    },
+    {
+      "id": "401857027",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-27T18:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/27 - 2:00 PM EDT",
+      "note": "",
+      "venue": "Scotiabank Arena, Toronto",
+      "broadcast": "CBS, Paramount+, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857027/mercury-tempo"
+    },
+    {
+      "id": "401857028",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/27 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Gainbridge Fieldhouse, Indianapolis",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857028/sparks-fever"
+    },
+    {
+      "id": "401857029",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T01:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/27 - 9:00 PM EDT",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "WNBA League Pass, Atlanta News First, Victory+ ATL, KOMO-TV, Prime Video-Seattle",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857029/dream-storm"
+    },
+    {
+      "id": "401857030",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T18:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/28 - 2:00 PM EDT",
+      "note": "",
+      "venue": "College Park Center, Arlington",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857030/lynx-wings"
+    },
+    {
+      "id": "401857031",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T19:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/28 - 3:00 PM EDT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "WNBA League Pass, Fox 12 Plus, MNMT",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857031/fire-mystics"
+    },
+    {
+      "id": "401857032",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T20:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/28 - 4:00 PM EDT",
+      "note": "",
+      "venue": "United Center, Chicago",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857032/aces-sky"
+    },
+    {
+      "id": "401857033",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-28T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/28 - 7:00 PM EDT",
+      "note": "",
+      "venue": "Chase Center, San Francisco",
+      "broadcast": "ESPN, Disney+",
+      "home": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857033/liberty-valkyries"
+    },
+    {
+      "id": "401857321",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-06-30T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "6/30 - 7:00 PM EDT",
+      "note": "WNBA Commissioner's Cup Championship",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": null,
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": null,
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857321/aces-liberty"
+    },
+    {
+      "id": "401857034",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-02T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/2 - 7:30 PM EDT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "MNMT, Atlanta News First, Victory+ ATL",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857034/dream-mystics"
+    },
+    {
+      "id": "401857035",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-03T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/2 - 8:00 PM EDT",
+      "note": "",
+      "venue": "PeoplesBank Arena, Hartford",
+      "broadcast": "Prime Video, KFAA-TV",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857035/wings-sun"
+    },
+    {
+      "id": "401857036",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-03T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/2 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "AZ Family Sports Net, Merc+, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857036/storm-mercury"
+    },
+    {
+      "id": "401857037",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-03T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/3 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ION",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857037/lynx-liberty"
+    },
+    {
+      "id": "401857038",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-04T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/3 - 10:00 PM EDT",
+      "note": "",
+      "venue": "T-Mobile Arena, Las Vegas",
+      "broadcast": "ION",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857038/sky-aces"
+    },
+    {
+      "id": "401857039",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-04T17:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/4 - 1:00 PM EDT",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857039/valkyries-dream"
+    },
+    {
+      "id": "401857040",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-05T01:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/4 - 9:00 PM EDT",
+      "note": "",
+      "venue": "Climate Pledge Arena, Seattle",
+      "broadcast": "KOMO-TV, Prime Video-Seattle, Fox 12 Plus",
+      "home": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857040/fire-storm"
+    },
+    {
+      "id": "401857041",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-05T19:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/5 - 3:00 PM EDT",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "TSN, KFAA-TV",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857041/wings-tempo"
+    },
+    {
+      "id": "401857042",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-05T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/5 - 7:00 PM EDT",
+      "note": "",
+      "venue": "T-Mobile Arena, Las Vegas",
+      "broadcast": "ESPN, Disney+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857042/fever-aces"
+    },
+    {
+      "id": "401857043",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-06T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/6 - 7:30 PM EDT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "MNMT",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857043/valkyries-mystics"
+    },
+    {
+      "id": "401857044",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-07T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/6 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "NBC Sports BO, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857044/sun-lynx"
+    },
+    {
+      "id": "401857045",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-07T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/6 - 10:00 PM EDT",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "USA Net, Spectrum Sports Net, CW Seattle, Prime Video-Seattle",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857045/storm-sparks"
+    },
+    {
+      "id": "401857046",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-08T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/7 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Barclays Center, Brooklyn",
+      "broadcast": "ESPN",
+      "home": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857046/wings-liberty"
+    },
+    {
+      "id": "401857047",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-08T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/7 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "AZ Family Sports Net, Merc+, CW26",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857047/sky-mercury"
+    },
+    {
+      "id": "401857048",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-08T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/8 - 7:00 PM EDT",
+      "note": "",
+      "venue": "Coca-Cola Coliseum, Toronto",
+      "broadcast": "KPIX+, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857048/valkyries-tempo"
+    },
+    {
+      "id": "401857049",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-08T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/8 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "USA Net, Victory+ MIN",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857049/lynx-sun"
+    },
+    {
+      "id": "401857050",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-09T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/8 - 10:00 PM EDT",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "USA Net, CNBC, Spectrum Sports Net, WTHR Channel 13",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857050/fever-sparks"
+    },
+    {
+      "id": "401857051",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-10T00:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/9 - 8:00 PM EDT",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "Prime Video",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857051/storm-dream"
+    },
+    {
+      "id": "401857052",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-10T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/9 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Mortgage Matchup Center, Phoenix",
+      "broadcast": "Prime Video, WTHR Channel 13",
+      "home": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857052/fever-mercury"
+    },
+    {
+      "id": "401857053",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-10T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/9 - 10:00 PM EDT",
+      "note": "",
+      "venue": "Moda Center, Portland",
+      "broadcast": "Fox 12 Plus, Vegas 34",
+      "home": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "away": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857053/aces-fire"
+    },
+    {
+      "id": "401857054",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-10T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/10 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Mohegan Sun Arena, Uncasville",
+      "broadcast": "ION",
+      "home": {
+        "name": "Connecticut Sun",
+        "abbrev": "CON",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/con.png",
+        "id": "18",
+        "score": "0",
+        "record": "2-15",
+        "winner": false
+      },
+      "away": {
+        "name": "Golden State Valkyries",
+        "abbrev": "GS",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/gs.png",
+        "id": "129689",
+        "score": "0",
+        "record": "10-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857054/valkyries-sun"
+    },
+    {
+      "id": "401857055",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-10T23:30Z",
+      "status": "scheduled",
+      "statusDetail": "7/10 - 7:30 PM EDT",
+      "note": "",
+      "venue": "Bell Centre, Montreal",
+      "broadcast": "ION, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857055/wings-tempo"
+    },
+    {
+      "id": "401857056",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-11T02:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/10 - 10:00 PM EDT",
+      "note": "",
+      "venue": "crypto.com Arena, Los Angeles",
+      "broadcast": "ION",
+      "home": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857056/sky-sparks"
+    },
+    {
+      "id": "401857057",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-11T17:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/11 - 1:00 PM EDT",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "ABC",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857057/liberty-lynx"
+    },
+    {
+      "id": "401857059",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-11T20:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/11 - 4:00 PM EDT",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "CBS, Paramount+",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Portland Fire",
+        "abbrev": "POR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/por.png",
+        "id": "132052",
+        "score": "0",
+        "record": "8-9",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857059/fire-dream"
+    },
+    {
+      "id": "401857058",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-11T22:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/11 - 6:00 PM EDT",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "Peacock, NBCSN, Vegas 34, Arizona's Family 3TV, Merc+",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857058/mercury-aces"
+    },
+    {
+      "id": "401857060",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-12T19:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/12 - 3:00 PM EDT",
+      "note": "",
+      "venue": "Bell Centre, Montreal",
+      "broadcast": "NBA TV, Fox 5 New York, Liberty Live, TSN",
+      "home": {
+        "name": "Toronto Tempo",
+        "abbrev": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/tor.png",
+        "id": "131935",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "away": {
+        "name": "New York Liberty",
+        "abbrev": "NY",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ny.png",
+        "id": "9",
+        "score": "0",
+        "record": "11-6",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857060/liberty-tempo"
+    },
+    {
+      "id": "401857061",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-12T19:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/12 - 3:00 PM EDT",
+      "note": "",
+      "venue": "CareFirst Arena, Washington",
+      "broadcast": "MNMT, KOMO-TV, Prime Video-Seattle",
+      "home": {
+        "name": "Washington Mystics",
+        "abbrev": "WSH",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/wsh.png",
+        "id": "16",
+        "score": "0",
+        "record": "8-7",
+        "winner": false
+      },
+      "away": {
+        "name": "Seattle Storm",
+        "abbrev": "SEA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/sea.png",
+        "id": "14",
+        "score": "0",
+        "record": "3-14",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857061/storm-mystics"
+    },
+    {
+      "id": "401857062",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-12T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/12 - 7:00 PM EDT",
+      "note": "",
+      "venue": "American Airlines Center, Dallas",
+      "broadcast": "ESPN, Disney+",
+      "home": {
+        "name": "Dallas Wings",
+        "abbrev": "DAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/dal.png",
+        "id": "3",
+        "score": "0",
+        "record": "10-6",
+        "winner": false
+      },
+      "away": {
+        "name": "Chicago Sky",
+        "abbrev": "CHI",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/chi.png",
+        "id": "19",
+        "score": "0",
+        "record": "4-11",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857062/sky-wings"
+    },
+    {
+      "id": "401857063",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-13T01:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/12 - 9:00 PM EDT",
+      "note": "",
+      "venue": "Michelob ULTRA Arena, Las Vegas",
+      "broadcast": "NBC, Peacock",
+      "home": {
+        "name": "Las Vegas Aces",
+        "abbrev": "LV",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/lv.png",
+        "id": "17",
+        "score": "0",
+        "record": "12-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Indiana Fever",
+        "abbrev": "IND",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/ind.png",
+        "id": "5",
+        "score": "0",
+        "record": "9-7",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857063/fever-aces"
+    },
+    {
+      "id": "401857064",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-13T23:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/13 - 7:00 PM EDT",
+      "note": "",
+      "venue": "Gateway Center, College Park",
+      "broadcast": "USA Net, Atlanta News First, Victory+ ATL, Spectrum Sports Net",
+      "home": {
+        "name": "Atlanta Dream",
+        "abbrev": "ATL",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/atl.png",
+        "id": "20",
+        "score": "0",
+        "record": "11-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Los Angeles Sparks",
+        "abbrev": "LA",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/la.png",
+        "id": "6",
+        "score": "0",
+        "record": "8-8",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857064/sparks-dream"
+    },
+    {
+      "id": "401857065",
+      "league": "wnba",
+      "leagueName": "WNBA",
+      "date": "2026-07-14T01:00Z",
+      "status": "scheduled",
+      "statusDetail": "7/13 - 9:00 PM EDT",
+      "note": "",
+      "venue": "Target Center, Minneapolis",
+      "broadcast": "Peacock, NBCSN, AZ Family Sports Net, Merc+, Victory+ MIN",
+      "home": {
+        "name": "Minnesota Lynx",
+        "abbrev": "MIN",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/min.png",
+        "id": "8",
+        "score": "0",
+        "record": "13-4",
+        "winner": false
+      },
+      "away": {
+        "name": "Phoenix Mercury",
+        "abbrev": "PHX",
+        "logo": "https://a.espncdn.com/i/teamlogos/wnba/500/scoreboard/phx.png",
+        "id": "11",
+        "score": "0",
+        "record": "5-12",
+        "winner": false
+      },
+      "url": "https://www.espn.com/wnba/game/_/gameId/401857065/mercury-lynx"
+    }
+  ]
+}
