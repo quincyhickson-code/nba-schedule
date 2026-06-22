@@ -827,7 +827,11 @@ async function init() {
   if (allGames.length === 0 && !generatedAt) {
     const el = document.getElementById('updated')
     if (el) el.textContent = 'Warming up…'
-    setTimeout(async () => { await fetchSchedule(); render() }, 5000)
+    let retries = 0
+    const poll = setInterval(async () => {
+      await fetchSchedule()
+      if (allGames.length > 0 || ++retries >= 8) { clearInterval(poll); render() }
+    }, 5000)
   }
 }
 init()
