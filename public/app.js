@@ -1,6 +1,6 @@
 'use strict'
 
-/* ── NBA teams: 30 franchises with conference + brand colors ── */
+/* ── NBA teams ── */
 const NBA_TEAMS = [
   // Eastern Conference
   { abbrev:'BOS', name:'Boston Celtics',           conf:'East', c1:'#007a33', c2:'#ffffff', espnId:2  },
@@ -36,18 +36,53 @@ const NBA_TEAMS = [
   { abbrev:'SAS', name:'San Antonio Spurs',        conf:'West', c1:'#c4ced4', c2:'#000000', espnId:24 },
 ]
 
+/* ── WNBA teams ── */
+const WNBA_TEAMS = [
+  // Eastern Conference
+  { abbrev:'ATL',  name:'Atlanta Dream',          conf:'East', c1:'#c8102e', c2:'#041e42', espnId:6   },
+  { abbrev:'CHI',  name:'Chicago Sky',            conf:'East', c1:'#418fde', c2:'#ffd520', espnId:3   },
+  { abbrev:'CONN', name:'Connecticut Sun',        conf:'East', c1:'#e03a3e', c2:'#0c2340', espnId:7   },
+  { abbrev:'IND',  name:'Indiana Fever',          conf:'East', c1:'#002d62', c2:'#bf5700', espnId:5   },
+  { abbrev:'NY',   name:'New York Liberty',       conf:'East', c1:'#6eceb2', c2:'#000000', espnId:9   },
+  { abbrev:'WAS',  name:'Washington Mystics',     conf:'East', c1:'#e31837', c2:'#002b5c', espnId:14  },
+  // Western Conference
+  { abbrev:'DAL',  name:'Dallas Wings',           conf:'West', c1:'#c4d600', c2:'#002b5c', espnId:4   },
+  { abbrev:'LV',   name:'Las Vegas Aces',         conf:'West', c1:'#000000', c2:'#c8102e', espnId:8   },
+  { abbrev:'LA',   name:'Los Angeles Sparks',     conf:'West', c1:'#702f8a', c2:'#ffc72c', espnId:2   },
+  { abbrev:'MIN',  name:'Minnesota Lynx',         conf:'West', c1:'#266092', c2:'#236192', espnId:11  },
+  { abbrev:'PHX',  name:'Phoenix Mercury',        conf:'West', c1:'#201747', c2:'#e56020', espnId:12  },
+  { abbrev:'SEA',  name:'Seattle Storm',          conf:'West', c1:'#2c5234', c2:'#fef200', espnId:13  },
+]
+
 const POSITION_ORDER = ['PG','SG','SF','PF','C','G','F','G-F','F-C','F-G']
-const ESPN_BASE = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
+
+/* ── League context helpers ── */
+function currentTeams()  { return prefs.sport === 'wnba' ? WNBA_TEAMS : NBA_TEAMS }
+function espnBase()      { return `https://site.api.espn.com/apis/site/v2/sports/basketball/${prefs.sport || 'nba'}` }
+function logoUrl(abbrev) {
+  const league = prefs.sport === 'wnba' ? 'wnba' : 'nba'
+  return `https://a.espncdn.com/i/teamlogos/${league}/500/${abbrev?.toLowerCase()}.png`
+}
+function teamByAbbrev(abbrev) {
+  return currentTeams().find(t => t.abbrev === abbrev?.toUpperCase()) || null
+}
+function teamConf(abbrevOrName) {
+  const t = currentTeams().find(t =>
+    t.abbrev === abbrevOrName?.toUpperCase() ||
+    t.name.toLowerCase() === abbrevOrName?.toLowerCase()
+  )
+  return t?.conf || null
+}
 
 /* ── State ── */
 let allGames = [], archiveGames = [], generatedAt = null
 const rosterPlayerCache = new Map()
-const teamLogoCache     = new Map() // abbrev → { logo, id }
+const teamLogoCache     = new Map()
 
 /* ── Prefs ── */
 const PREF_KEY = 'nba-schedule-prefs'
 const PREF_DEFAULTS = {
-  view: 'schedule', conference: 'all', statusFilter: [],
+  sport: 'nba', view: 'schedule', conference: 'all', statusFilter: [],
   showScores: false, showVenue: true, showBroadcast: true,
   hideWatched: false, showArchive: false,
   myTeam: null, favTeams: [], favPlayers: [],
@@ -56,55 +91,34 @@ const PREF_DEFAULTS = {
 let prefs = { ...PREF_DEFAULTS }
 
 function loadPrefs() {
-  try {
-    const s = localStorage.getItem(PREF_KEY)
-    if (s) Object.assign(prefs, JSON.parse(s))
-  } catch {}
+  try { const s = localStorage.getItem(PREF_KEY); if (s) Object.assign(prefs, JSON.parse(s)) } catch {}
 }
 function savePrefs() {
   try { localStorage.setItem(PREF_KEY, JSON.stringify(prefs)) } catch {}
-}
-
-/* ── Team lookup helpers ── */
-function teamByAbbrev(abbrev) {
-  return NBA_TEAMS.find(t => t.abbrev === abbrev?.toUpperCase()) || null
-}
-function logoUrl(abbrev) {
-  return `https://a.espncdn.com/i/teamlogos/nba/500/${abbrev?.toLowerCase()}.png`
-}
-function teamConf(abbrevOrName) {
-  const t = NBA_TEAMS.find(t =>
-    t.abbrev === abbrevOrName?.toUpperCase() ||
-    t.name.toLowerCase() === abbrevOrName?.toLowerCase()
-  )
-  return t?.conf || null
 }
 
 /* ── My Team theming ── */
 function applyTheme() {
   const t = teamByAbbrev(prefs.myTeam)
   const r = document.documentElement
+  const defaultAccent = prefs.sport === 'wnba' ? '#c8102e' : '#f76b1c'
+  const defaultAccent2 = prefs.sport === 'wnba' ? '#a00e28' : '#e05a0e'
   if (t) {
     r.style.setProperty('--t1', t.c1)
     r.style.setProperty('--t2', t.c2)
     r.style.setProperty('--accent', t.c1)
     r.style.setProperty('--accent2', shadeColor(t.c1, -20))
   } else {
-    r.style.setProperty('--t1', '#f76b1c')
+    r.style.setProperty('--t1', defaultAccent)
     r.style.setProperty('--t2', '#1a1d24')
-    r.style.setProperty('--accent', '#f76b1c')
-    r.style.setProperty('--accent2', '#e05a0e')
+    r.style.setProperty('--accent', defaultAccent)
+    r.style.setProperty('--accent2', defaultAccent2)
   }
-  const myTeamHeader = document.getElementById('my-team-header')
-  const myTeamCrest  = document.getElementById('my-team-crest')
-  const myTeamLabel  = document.getElementById('my-team-label')
-  if (t) {
-    myTeamCrest.src = logoUrl(t.abbrev)
-    myTeamLabel.textContent = t.name
-    myTeamHeader.style.display = 'flex'
-  } else {
-    myTeamHeader.style.display = 'none'
-  }
+  const hdr   = document.getElementById('my-team-header')
+  const crest = document.getElementById('my-team-crest')
+  const label = document.getElementById('my-team-label')
+  if (t) { crest.src = logoUrl(t.abbrev); label.textContent = t.name; hdr.style.display = 'flex' }
+  else    { hdr.style.display = 'none' }
 }
 function shadeColor(hex, pct) {
   const num = parseInt(hex.replace('#',''), 16)
@@ -114,37 +128,27 @@ function shadeColor(hex, pct) {
   return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('')
 }
 
-/* ── Time/date formatting ── */
+/* ── Time/date ── */
 function getTz() { return prefs.tz === 'auto' ? undefined : prefs.tz }
-function fmtTime(iso) {
-  return new Date(iso).toLocaleTimeString([], { hour:'numeric', minute:'2-digit', timeZone: getTz() })
-}
-function fmtDate(iso) {
-  return new Date(iso).toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', timeZone: getTz() })
-}
-function dayKey(iso) {
-  return new Date(iso).toLocaleDateString('en-US', { year:'numeric', month:'2-digit', day:'2-digit', timeZone: getTz() })
-}
+function fmtTime(iso) { return new Date(iso).toLocaleTimeString([], { hour:'numeric', minute:'2-digit', timeZone: getTz() }) }
+function fmtDate(iso) { return new Date(iso).toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', timeZone: getTz() }) }
+function dayKey(iso)  { return new Date(iso).toLocaleDateString('en-US', { year:'numeric', month:'2-digit', day:'2-digit', timeZone: getTz() }) }
 
-/* ── ESPN stat helper ── */
-function flatStats(player) {
-  return (player.statistics?.splits?.categories || []).flatMap(c => c.stats || [])
-}
-function getStat(player, name) {
-  return flatStats(player).find(s => s.abbreviation === name || s.name === name)?.displayValue || '—'
-}
-
-/* ── Schedule fetch ── */
+/* ── Fetch ── */
 async function fetchSchedule() {
+  const isWnba = prefs.sport === 'wnba'
+  const schedPath  = isWnba ? '/data/wnba-schedule.json' : '/data/schedule.json'
+  const archPath   = isWnba ? '/data/wnba-archive.json'  : '/data/archive.json'
+
   const [sched, arch] = await Promise.all([
-    fetch('/data/schedule.json').then(r => r.json()).catch(() => ({ games: [] })),
-    fetch('/data/archive.json').then(r => r.json()).catch(() => ({ games: [] })),
+    fetch(schedPath).then(r => r.json()).catch(() => ({ games: [] })),
+    fetch(archPath).then(r => r.json()).catch(() => ({ games: [] })),
   ])
-  allGames     = sched.games     || []
-  archiveGames = arch.games      || []
+  allGames     = sched.games    || []
+  archiveGames = arch.games     || []
   generatedAt  = sched.generatedAt
 
-  // Populate teamLogoCache from scraped data
+  teamLogoCache.clear()
   for (const g of allGames) {
     for (const side of [g.home, g.away]) {
       if (side?.abbrev && !teamLogoCache.has(side.abbrev)) {
@@ -159,45 +163,32 @@ async function fetchSchedule() {
     : 'No data'
 }
 
-/* ── Filter & render ── */
+/* ── Filter ── */
 function filteredGames() {
   let games = prefs.showArchive ? [...archiveGames, ...allGames] : [...allGames]
 
-  // Conference filter
   if (prefs.conference !== 'all') {
     games = games.filter(g => {
-      const hConf = teamConf(g.home?.abbrev) || teamConf(g.home?.name)
-      const aConf = teamConf(g.away?.abbrev) || teamConf(g.away?.name)
-      return hConf === prefs.conference || aConf === prefs.conference
+      const hc = teamConf(g.home?.abbrev) || teamConf(g.home?.name)
+      const ac = teamConf(g.away?.abbrev) || teamConf(g.away?.name)
+      return hc === prefs.conference || ac === prefs.conference
     })
   }
-
-  // Status filter
   if (prefs.statusFilter.length) {
     games = games.filter(g => prefs.statusFilter.includes(g.status))
   }
-
-  // Search
   const q = document.getElementById('search')?.value?.toLowerCase()
   if (q) {
     games = games.filter(g =>
       g.home?.name?.toLowerCase().includes(q) || g.away?.name?.toLowerCase().includes(q)
     )
   }
-
-  // Saved-only
-  if (prefs.savedOnly) {
-    games = games.filter(g => prefs.savedGames.includes(g.id))
-  }
-
-  // Hide watched
-  if (prefs.hideWatched) {
-    games = games.filter(g => !prefs.watchedGames.includes(g.id))
-  }
-
+  if (prefs.savedOnly)    games = games.filter(g => prefs.savedGames.includes(g.id))
+  if (prefs.hideWatched)  games = games.filter(g => !prefs.watchedGames.includes(g.id))
   return games
 }
 
+/* ── Render ── */
 function render() {
   if (prefs.view === 'teams') { renderTeams(); return }
 
@@ -205,11 +196,14 @@ function render() {
   const list  = document.getElementById('list')
 
   if (!games.length) {
-    list.innerHTML = '<div class="empty">No games match your filters.</div>'
+    const isWnba = prefs.sport === 'wnba'
+    const isEmpty = allGames.length === 0 && archiveGames.length === 0
+    list.innerHTML = isEmpty
+      ? `<div class="empty">${isWnba ? 'WNBA season data loading — click Refresh.' : 'No games in range. Try Show archive.'}</div>`
+      : '<div class="empty">No games match your filters.</div>'
     return
   }
 
-  // Group by date
   const byDay = new Map()
   for (const g of games) {
     const k = dayKey(g.date)
@@ -224,9 +218,7 @@ function render() {
   for (const [, dayGames] of byDay) {
     html += `<div class="date-group">`
     html += `<div class="date-heading">${fmtDate(dayGames[0].date)}</div>`
-    for (const g of dayGames) {
-      html += renderGameCard(g, isFavTeam, isMyTeam)
-    }
+    for (const g of dayGames) html += renderGameCard(g, isFavTeam, isMyTeam)
     html += `</div>`
   }
   list.innerHTML = html
@@ -243,22 +235,15 @@ function renderGameCard(g, isFavTeam, isMyTeam) {
   let cardClass = 'game-card'
   if (myTeamGame) cardClass += ' my-team-game'
   else if (isLive) cardClass += ' live'
-  if (isWatched)  cardClass += ' watched'
+  if (isWatched) cardClass += ' watched'
 
-  // Time label
-  let timeLabel = fmtTime(g.date)
-  let timeLabelClass = 'game-time-label'
-  let timeSub = ''
-  if (isLive) {
-    timeLabel = g.statusDetail || 'LIVE'
-    timeLabelClass += ' live-label'
-  } else if (isCompleted) {
-    timeLabel = 'Final'
-    timeLabelClass += ' final-label'
+  let timeLabel = fmtTime(g.date), timeLabelClass = 'game-time-label', timeSub = ''
+  if (isLive) { timeLabel = g.statusDetail || 'LIVE'; timeLabelClass += ' live-label' }
+  else if (isCompleted) {
+    timeLabel = 'Final'; timeLabelClass += ' final-label'
     if (g.statusDetail && g.statusDetail !== 'Final') timeSub = g.statusDetail
   }
 
-  // Scores
   const showScore = prefs.showScores && (isLive || isCompleted)
   const homeScore = showScore && g.home?.score != null
     ? `<span class="team-score${g.home?.winner ? ' winner' : ''}">${g.home.score}</span>`
@@ -267,31 +252,22 @@ function renderGameCard(g, isFavTeam, isMyTeam) {
     ? `<span class="team-score${g.away?.winner ? ' winner' : ''}">${g.away.score}</span>`
     : `<span class="team-score score-hidden">-</span>`
 
-  const hLogo  = g.home?.logo  || logoUrl(g.home?.abbrev)
-  const aLogo  = g.away?.logo  || logoUrl(g.away?.abbrev)
+  const hLogo   = g.home?.logo || logoUrl(g.home?.abbrev)
+  const aLogo   = g.away?.logo || logoUrl(g.away?.abbrev)
   const hTeamId = teamLogoCache.get(g.home?.abbrev)?.id || g.home?.id || null
   const aTeamId = teamLogoCache.get(g.away?.abbrev)?.id || g.away?.id || null
 
-  const hRosterBtn = hTeamId
-    ? `<button class="roster-pill" data-team-id="${hTeamId}" data-team-abbrev="${g.home?.abbrev || ''}" data-team-name="${g.home?.name || ''}">Roster</button>`
-    : ''
-  const aRosterBtn = aTeamId
-    ? `<button class="roster-pill" data-team-id="${aTeamId}" data-team-abbrev="${g.away?.abbrev || ''}" data-team-name="${g.away?.name || ''}">Roster</button>`
-    : ''
+  const hRosterBtn = hTeamId ? `<button class="roster-pill" data-team-id="${hTeamId}" data-team-abbrev="${g.home?.abbrev||''}" data-team-name="${g.home?.name||''}">Roster</button>` : ''
+  const aRosterBtn = aTeamId ? `<button class="roster-pill" data-team-id="${aTeamId}" data-team-abbrev="${g.away?.abbrev||''}" data-team-name="${g.away?.name||''}">Roster</button>` : ''
 
   const hRecord = g.home?.record ? `<span class="team-record">(${g.home.record})</span>` : ''
   const aRecord = g.away?.record ? `<span class="team-record">(${g.away.record})</span>` : ''
-
   const hFav = isFavTeam(g.home?.abbrev) ? ' ★' : ''
   const aFav = isFavTeam(g.away?.abbrev) ? ' ★' : ''
 
   const metaParts = []
-  if (prefs.showBroadcast && g.broadcast) {
-    metaParts.push(`<span class="broadcast-tag">${g.broadcast}</span>`)
-  }
-  if (prefs.showVenue && g.venue) {
-    metaParts.push(`<span class="venue-tag">${g.venue}</span>`)
-  }
+  if (prefs.showBroadcast && g.broadcast) metaParts.push(`<span class="broadcast-tag">${g.broadcast}</span>`)
+  if (prefs.showVenue && g.venue) metaParts.push(`<span class="venue-tag">${g.venue}</span>`)
 
   return `
 <div class="${cardClass}" data-game-id="${g.id}">
@@ -302,23 +278,19 @@ function renderGameCard(g, isFavTeam, isMyTeam) {
   <div class="game-teams">
     <div class="game-team-row">
       <img class="team-logo" src="${aLogo}" alt="" onerror="this.style.display='none'" />
-      <span class="team-name">${g.away?.name || 'Away'}${aFav}</span>
-      ${aRecord}
-      ${awayScore}
-      ${aRosterBtn}
+      <span class="team-name">${g.away?.name||'Away'}${aFav}</span>
+      ${aRecord}${awayScore}${aRosterBtn}
     </div>
     <div class="game-team-row">
       <img class="team-logo" src="${hLogo}" alt="" onerror="this.style.display='none'" />
-      <span class="team-name">${g.home?.name || 'Home'}${hFav}</span>
-      ${hRecord}
-      ${homeScore}
-      ${hRosterBtn}
+      <span class="team-name">${g.home?.name||'Home'}${hFav}</span>
+      ${hRecord}${homeScore}${hRosterBtn}
     </div>
     ${g.note ? `<div class="game-note">${g.note}</div>` : ''}
   </div>
   <div class="game-meta">
-    <button class="star-btn${isSaved ? ' active' : ''}" data-id="${g.id}" title="Save game">★</button>
-    ${isCompleted ? `<button class="watch-btn${isWatched ? ' watched' : ''}" data-id="${g.id}">${isWatched ? '✓' : '○'}</button>` : ''}
+    <button class="star-btn${isSaved?' active':''}" data-id="${g.id}" title="Save game">★</button>
+    ${isCompleted ? `<button class="watch-btn${isWatched?' watched':''}" data-id="${g.id}">${isWatched?'✓':'○'}</button>` : ''}
     ${metaParts.join('')}
   </div>
 </div>`
@@ -331,8 +303,7 @@ function rebindCards() {
       const id = btn.dataset.id
       if (prefs.savedGames.includes(id)) prefs.savedGames = prefs.savedGames.filter(x => x !== id)
       else prefs.savedGames.push(id)
-      savePrefs()
-      btn.classList.toggle('active', prefs.savedGames.includes(id))
+      savePrefs(); btn.classList.toggle('active', prefs.savedGames.includes(id))
     })
   })
   document.querySelectorAll('.watch-btn').forEach(btn => {
@@ -341,8 +312,7 @@ function rebindCards() {
       const id = btn.dataset.id
       if (prefs.watchedGames.includes(id)) prefs.watchedGames = prefs.watchedGames.filter(x => x !== id)
       else prefs.watchedGames.push(id)
-      savePrefs()
-      render()
+      savePrefs(); render()
     })
   })
   document.querySelectorAll('.roster-pill').forEach(btn => {
@@ -355,10 +325,9 @@ function rebindCards() {
 
 /* ── Teams view ── */
 function renderTeams() {
-  const list = document.getElementById('list')
-  const conf = prefs.conference
-
-  const teams = NBA_TEAMS.filter(t => conf === 'all' || t.conf === conf)
+  const list  = document.getElementById('list')
+  const conf  = prefs.conference
+  const teams = currentTeams().filter(t => conf === 'all' || t.conf === conf)
   const byConf = {}
   for (const t of teams) {
     if (!byConf[t.conf]) byConf[t.conf] = []
@@ -372,7 +341,7 @@ function renderTeams() {
       const cached = teamLogoCache.get(t.abbrev)
       const teamId = cached?.id || t.espnId
       const logo   = cached?.logo || logoUrl(t.abbrev)
-      html += `<div class="team-card" data-team-id="${teamId || ''}" data-team-abbrev="${t.abbrev}" data-team-name="${t.name}">
+      html += `<div class="team-card" data-team-id="${teamId||''}" data-team-abbrev="${t.abbrev}" data-team-name="${t.name}">
         <img class="team-card-crest" src="${logo}" alt="${t.name}" onerror="this.style.display='none'" />
         <div class="team-card-name">${t.name}</div>
       </div>`
@@ -393,8 +362,7 @@ function showModal(html) {
   let backdrop = document.getElementById('modal-backdrop')
   if (!backdrop) {
     backdrop = document.createElement('div')
-    backdrop.id = 'modal-backdrop'
-    backdrop.className = 'modal-backdrop'
+    backdrop.id = 'modal-backdrop'; backdrop.className = 'modal-backdrop'
     backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal() })
     document.body.appendChild(backdrop)
   }
@@ -403,10 +371,7 @@ function showModal(html) {
   backdrop.querySelector('.modal-close')?.addEventListener('click', closeModal)
   document.addEventListener('keydown', escClose)
 }
-function closeModal() {
-  document.getElementById('modal-backdrop')?.classList.add('hidden')
-  document.removeEventListener('keydown', escClose)
-}
+function closeModal() { document.getElementById('modal-backdrop')?.classList.add('hidden'); document.removeEventListener('keydown', escClose) }
 function escClose(e) { if (e.key === 'Escape') closeModal() }
 
 async function openTeamRoster(teamId, abbrev, name) {
@@ -417,35 +382,31 @@ async function openTeamRoster(teamId, abbrev, name) {
     <button class="modal-close">✕</button>
   </div><div class="modal-body"><div class="empty">Loading roster…</div></div></div>`)
 
+  const base = espnBase()
   const year = new Date().getFullYear()
   let athletes = []
   for (const y of [year, year - 1]) {
     try {
-      const res = await fetch(`${ESPN_BASE}/teams/${teamId}/roster?season=${y}`)
+      const res  = await fetch(`${base}/teams/${teamId}/roster?season=${y}`)
       const data = await res.json()
-      athletes = data.athletes || []
+      athletes   = data.athletes || []
       if (athletes.length) break
-    } catch { /* try next year */ }
+    } catch {}
   }
 
-  // Cache all players
   for (const p of athletes) {
-    if (p.id) rosterPlayerCache.set(String(p.id), { ...p, _teamId: teamId, _teamAbbrev: abbrev, _teamName: name })
+    if (p.id) rosterPlayerCache.set(String(p.id), { ...p, _teamId: teamId, _teamAbbrev: abbrev, _teamName: name, _sport: prefs.sport })
   }
 
-  // Group by position
   const groups = {}
   for (const p of athletes) {
     const pos = p.position?.abbreviation || p.position?.displayName || 'Other'
     if (!groups[pos]) groups[pos] = []
     groups[pos].push(p)
   }
-
-  // Order positions
   const orderedPos = POSITION_ORDER.filter(p => groups[p])
   const remaining  = Object.keys(groups).filter(p => !POSITION_ORDER.includes(p))
 
-  // Upcoming games for this team
   const upcoming = allGames
     .filter(g => g.status === 'scheduled' &&
       (g.home?.id === teamId || g.away?.id === teamId ||
@@ -458,10 +419,10 @@ async function openTeamRoster(teamId, abbrev, name) {
       <div class="prf-section-label">Upcoming games</div>
       ${upcoming.map(g => {
         const opp = g.home?.abbrev === abbrev ? g.away : g.home
-        const homeAway = g.home?.abbrev === abbrev ? 'vs' : '@'
+        const ha  = g.home?.abbrev === abbrev ? 'vs' : '@'
         return `<div class="prf-upcoming-row">
           <span class="prf-upcoming-date">${fmtDate(g.date).split(',')[0]} ${fmtTime(g.date)}</span>
-          <span class="prf-upcoming-match">${homeAway} ${opp?.name || ''}</span>
+          <span class="prf-upcoming-match">${ha} ${opp?.name||''}</span>
           ${g.broadcast ? `<span class="prf-upcoming-tv">${g.broadcast}</span>` : ''}
         </div>`
       }).join('')}
@@ -479,10 +440,10 @@ async function openTeamRoster(teamId, abbrev, name) {
         const photo   = p.headshot?.href || ''
         rosterHtml += `<div class="player-row" data-player-id="${p.id}">
           <img class="player-avatar" src="${photo}" alt="" onerror="this.style.display='none'" />
-          <span class="player-jersey">#${p.jersey || '—'}</span>
-          <span class="player-name">${p.displayName || p.fullName || 'Unknown'}</span>
-          <span class="player-nat">${p.citizenship || p.birthPlace?.country || ''}</span>
-          <button class="player-save-btn${isSaved ? ' saved' : ''}" data-player-id="${p.id}" title="${isSaved ? 'Unsave' : 'Save player'}">★</button>
+          <span class="player-jersey">#${p.jersey||'—'}</span>
+          <span class="player-name">${p.displayName||p.fullName||'Unknown'}</span>
+          <span class="player-nat">${p.citizenship||p.birthPlace?.country||''}</span>
+          <button class="player-save-btn${isSaved?' saved':''}" data-player-id="${p.id}" title="${isSaved?'Unsave':'Save player'}">★</button>
         </div>`
       }
       rosterHtml += '</div>'
@@ -500,10 +461,7 @@ async function openTeamRoster(teamId, abbrev, name) {
     })
   })
   modal.querySelectorAll('.player-save-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.stopPropagation()
-      toggleSavePlayer(btn.dataset.playerId, btn)
-    })
+    btn.addEventListener('click', e => { e.stopPropagation(); toggleSavePlayer(btn.dataset.playerId, btn) })
   })
 }
 
@@ -515,22 +473,15 @@ function toggleSavePlayer(playerId, btn) {
     prefs.favPlayers = prefs.favPlayers.filter(fp => fp.id !== String(playerId))
     btn?.classList.remove('saved')
   } else {
-    prefs.favPlayers.push({
-      id:     String(playerId),
-      name:   p.displayName || p.fullName,
-      team:   p._teamName,
-      abbrev: p._teamAbbrev,
-      teamId: p._teamId,
-      photo:  p.headshot?.href || '',
-    })
+    prefs.favPlayers.push({ id: String(playerId), name: p.displayName||p.fullName, team: p._teamName, abbrev: p._teamAbbrev, teamId: p._teamId, photo: p.headshot?.href||'', sport: p._sport||prefs.sport })
     btn?.classList.add('saved')
   }
-  savePrefs()
-  buildPlayersPanel()
+  savePrefs(); buildPlayersPanel()
 }
 
-/* ── Fetch player stats from most recent game boxscore for their team ── */
+/* ── Player stats ── */
 async function fetchPlayerGameStats(playerId, teamId) {
+  const base = espnBase()
   const teamGames = [...allGames, ...archiveGames]
     .filter(g => g.status === 'completed' &&
       (String(g.home?.id) === String(teamId) || String(g.away?.id) === String(teamId)))
@@ -538,7 +489,7 @@ async function fetchPlayerGameStats(playerId, teamId) {
 
   for (const game of teamGames.slice(0, 3)) {
     try {
-      const res  = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event=${game.id}`)
+      const res  = await fetch(`${base}/summary?event=${game.id}`)
       const data = await res.json()
       const labels = data.boxscore?.players?.[0]?.statistics?.[0]?.labels || []
       for (const team of (data.boxscore?.players || [])) {
@@ -547,36 +498,33 @@ async function fetchPlayerGameStats(playerId, teamId) {
           if (athlete?.stats?.length) {
             const opp  = String(game.home?.id) === String(teamId) ? game.away : game.home
             const date = new Date(game.date).toLocaleDateString('en-US', { month:'short', day:'numeric' })
-            return { labels, stats: athlete.stats, gameLabel: `${date} vs ${opp?.name || ''}` }
+            return { labels, stats: athlete.stats, gameLabel: `${date} vs ${opp?.name||''}` }
           }
         }
       }
-    } catch { /* try next game */ }
+    } catch {}
   }
   return null
 }
 
-/* ── Player profile card ── */
 async function openPlayerProfile(playerId, teamAbbrev, teamName) {
   const p = rosterPlayerCache.get(String(playerId))
   if (!p) return
-
   const photo   = p.headshot?.href || ''
   const pos     = p.position?.abbreviation || p.position?.displayName || ''
   const jersey  = p.jersey ? `#${p.jersey}` : ''
   const age     = p.age ? `Age ${p.age}` : ''
   const ht      = p.displayHeight || ''
   const wt      = p.displayWeight || ''
-  const meta    = [ht, wt, age, p.birthPlace?.city ? `${p.birthPlace.city}, ${p.birthPlace?.country || ''}` : ''].filter(Boolean).join(' · ')
+  const meta    = [ht, wt, age, p.birthPlace?.city ? `${p.birthPlace.city}, ${p.birthPlace?.country||''}` : ''].filter(Boolean).join(' · ')
   const isSaved = prefs.favPlayers.some(fp => fp.id === String(playerId))
   const abbrev  = teamAbbrev || p._teamAbbrev || ''
 
-  // Show card immediately with loading state for stats
   const cardBase = (statsContent) => `
 <div class="modal" style="max-width:440px">
   <div class="modal-header">
-    <button class="btn-outline" onclick="openTeamRoster('${p._teamId}','${abbrev}','${teamName || p._teamName}')">← Roster</button>
-    <span class="modal-title" style="font-size:15px">${teamName || p._teamName || ''}</span>
+    <button class="btn-outline" onclick="openTeamRoster('${p._teamId}','${abbrev}','${teamName||p._teamName}')">← Roster</button>
+    <span class="modal-title" style="font-size:15px">${teamName||p._teamName||''}</span>
     <button class="modal-close">✕</button>
   </div>
   <div class="player-card" style="margin:0;border:none;border-radius:0 0 14px 14px">
@@ -588,7 +536,7 @@ async function openPlayerProfile(playerId, teamAbbrev, teamName) {
       </div>
     </div>
     <div class="pc-body">
-      <div class="pc-name">${p.displayName || p.fullName || 'Unknown'}</div>
+      <div class="pc-name">${p.displayName||p.fullName||'Unknown'}</div>
       ${meta ? `<div class="pc-meta">${meta}</div>` : ''}
       <div id="pc-stats-area">${statsContent}</div>
       <div class="pc-actions">
@@ -601,14 +549,11 @@ async function openPlayerProfile(playerId, teamAbbrev, teamName) {
 </div>`
 
   showModal(cardBase('<div class="pc-meta" style="color:var(--muted)">Loading stats…</div>'))
-
   document.getElementById('pc-save-btn')?.addEventListener('click', function() {
     toggleSavePlayer(playerId, null)
-    const saved = prefs.favPlayers.some(fp => fp.id === String(playerId))
-    this.textContent = saved ? '★ Saved' : '☆ Save player'
+    this.textContent = prefs.favPlayers.some(fp => fp.id === String(playerId)) ? '★ Saved' : '☆ Save player'
   })
 
-  // Fetch game stats async, then update in place
   const SHOW = ['PTS','REB','AST','STL','BLK','MIN','+/-','FG','3PT','FT']
   const gameStats = await fetchPlayerGameStats(playerId, p._teamId)
   const statsArea = document.getElementById('pc-stats-area')
@@ -622,25 +567,26 @@ async function openPlayerProfile(playerId, teamAbbrev, teamName) {
       .join('')
     statsArea.innerHTML = statPills
       ? `<div class="pc-stats">${statPills}</div><div class="pc-meta" style="margin-top:4px">Last game · ${gameStats.gameLabel}</div>`
-      : `<div class="pc-meta">Did not play in last game.</div>`
+      : '<div class="pc-meta">Did not play in last game.</div>'
   } else {
     statsArea.innerHTML = '<div class="pc-meta">No recent game stats available.</div>'
   }
 }
 
 async function ensureRosterCached(teamId, abbrev, teamName) {
+  const base = espnBase()
   const year = new Date().getFullYear()
   for (const y of [year, year - 1]) {
     try {
-      const res = await fetch(`${ESPN_BASE}/teams/${teamId}/roster?season=${y}`)
+      const res  = await fetch(`${base}/teams/${teamId}/roster?season=${y}`)
       const data = await res.json()
       const athletes = data.athletes || []
       if (!athletes.length) continue
       for (const p of athletes) {
-        if (p.id) rosterPlayerCache.set(String(p.id), { ...p, _teamId: teamId, _teamAbbrev: abbrev, _teamName: teamName })
+        if (p.id) rosterPlayerCache.set(String(p.id), { ...p, _teamId: teamId, _teamAbbrev: abbrev, _teamName: teamName, _sport: prefs.sport })
       }
       return
-    } catch { /* try next */ }
+    } catch {}
   }
 }
 
@@ -648,14 +594,12 @@ async function ensureRosterCached(teamId, abbrev, teamName) {
 function buildPlayersPanel() {
   const panel = document.getElementById('players-panel')
   if (!panel) return
-
   if (!prefs.favPlayers.length) {
     panel.innerHTML = '<div class="fav-players-empty">No saved players yet. Tap a player in any roster to save them.</div>'
     return
   }
-
   panel.innerHTML = prefs.favPlayers.map(fp => `
-    <div class="fav-player-row" data-player-id="${fp.id}" data-team-id="${fp.teamId}" data-team-abbrev="${fp.abbrev}" data-team-name="${fp.team}">
+    <div class="fav-player-row" data-player-id="${fp.id}" data-team-id="${fp.teamId}" data-team-abbrev="${fp.abbrev}" data-team-name="${fp.team}" data-sport="${fp.sport||'nba'}">
       <img class="fav-player-avatar" src="${fp.photo}" alt="" onerror="this.style.display='none'" />
       <div class="fav-player-info">
         <div class="fav-player-name">${fp.name}</div>
@@ -668,20 +612,16 @@ function buildPlayersPanel() {
   panel.querySelectorAll('.fav-player-row').forEach(row => {
     row.addEventListener('click', async e => {
       if (e.target.classList.contains('fav-player-remove')) return
-      const pid    = row.dataset.playerId
-      const tid    = row.dataset.teamId
-      const abb    = row.dataset.teamAbbrev
-      const tname  = row.dataset.teamName
-      if (!rosterPlayerCache.has(pid)) await ensureRosterCached(tid, abb, tname)
-      openPlayerProfile(pid, abb, tname)
+      const pid = row.dataset.playerId
+      if (!rosterPlayerCache.has(pid)) await ensureRosterCached(row.dataset.teamId, row.dataset.teamAbbrev, row.dataset.teamName)
+      openPlayerProfile(pid, row.dataset.teamAbbrev, row.dataset.teamName)
     })
   })
   panel.querySelectorAll('.fav-player-remove').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation()
       prefs.favPlayers = prefs.favPlayers.filter(fp => fp.id !== btn.dataset.playerId)
-      savePrefs()
-      buildPlayersPanel()
+      savePrefs(); buildPlayersPanel()
     })
   })
 }
@@ -690,28 +630,9 @@ function buildPlayersPanel() {
 function buildFavoritesPanel() {
   const panel = document.getElementById('favorites-panel')
   if (!panel) return
+  const teams   = currentTeams().filter(t => prefs.favTeams.includes(t.abbrev))
+  const all     = [...teams, ...currentTeams().filter(t => !prefs.favTeams.includes(t.abbrev))]
 
-  const teams = NBA_TEAMS.filter(t => prefs.favTeams.includes(t.abbrev))
-  const notFaved = NBA_TEAMS.filter(t => !prefs.favTeams.includes(t.abbrev))
-  const all = [...teams, ...notFaved]
-
-  panel.innerHTML = all.map(t => {
-    const isFav  = prefs.favTeams.includes(t.abbrev)
-    const isMyT  = prefs.myTeam === t.abbrev
-    const cached = teamLogoCache.get(t.abbrev)
-    const logo   = cached?.logo || logoUrl(t.abbrev)
-    if (!isFav) return ''  // only show favorited teams
-    return `<div class="fav-team-row">
-      <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
-      <span class="fav-team-name">${t.name}</span>
-      <button class="my-team-btn${isMyT ? ' active' : ''}" data-abbrev="${t.abbrev}">
-        ${isMyT ? '★ My Team' : '☆ My Team'}
-      </button>
-      <button class="fav-team-star" data-abbrev="${t.abbrev}" title="Unfavorite">★</button>
-    </div>`
-  }).join('')
-
-  // If no favs, show all for picking
   if (!prefs.favTeams.length) {
     panel.innerHTML = all.map(t => {
       const logo = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
@@ -721,6 +642,17 @@ function buildFavoritesPanel() {
         <button class="fav-team-star" data-abbrev="${t.abbrev}" title="Favorite" style="color:var(--border)">★</button>
       </div>`
     }).join('')
+  } else {
+    panel.innerHTML = teams.map(t => {
+      const isMyT = prefs.myTeam === t.abbrev
+      const logo  = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
+      return `<div class="fav-team-row">
+        <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
+        <span class="fav-team-name">${t.name}</span>
+        <button class="my-team-btn${isMyT?' active':''}" data-abbrev="${t.abbrev}">${isMyT?'★ My Team':'☆ My Team'}</button>
+        <button class="fav-team-star" data-abbrev="${t.abbrev}" title="Unfavorite">★</button>
+      </div>`
+    }).join('')
   }
 
   panel.querySelectorAll('.fav-team-star').forEach(btn => {
@@ -728,24 +660,18 @@ function buildFavoritesPanel() {
       const abbrev = btn.dataset.abbrev
       if (prefs.favTeams.includes(abbrev)) prefs.favTeams = prefs.favTeams.filter(a => a !== abbrev)
       else prefs.favTeams.push(abbrev)
-      savePrefs()
-      buildFavoritesPanel()
-      render()
+      savePrefs(); buildFavoritesPanel(); render()
     })
   })
   panel.querySelectorAll('.my-team-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const abbrev = btn.dataset.abbrev
-      prefs.myTeam = prefs.myTeam === abbrev ? null : abbrev
-      savePrefs()
-      applyTheme()
-      buildFavoritesPanel()
-      render()
+      prefs.myTeam = prefs.myTeam === btn.dataset.abbrev ? null : btn.dataset.abbrev
+      savePrefs(); applyTheme(); buildFavoritesPanel(); render()
     })
   })
 }
 
-/* ── View toggle / slider ── */
+/* ── View slider ── */
 function moveSliderTrack() {
   const active = document.querySelector('.view-opt.active')
   const track  = document.querySelector('.view-slider-track')
@@ -754,67 +680,65 @@ function moveSliderTrack() {
     track.style.width     = `${active.offsetWidth}px`
   }
 }
-
 function initViewToggle() {
   document.querySelectorAll('.view-opt').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.view-opt').forEach(b => b.classList.remove('active'))
-      btn.classList.add('active')
-      prefs.view = btn.dataset.view
-      savePrefs()
-      moveSliderTrack()
-      render()
+      btn.classList.add('active'); prefs.view = btn.dataset.view
+      savePrefs(); moveSliderTrack(); render()
     })
-  })
-  // Set initial active state from prefs
-  document.querySelectorAll('.view-opt').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.view === prefs.view)
   })
   requestAnimationFrame(() => requestAnimationFrame(moveSliderTrack))
 }
 
-/* ── Time zone select ── */
+/* ── TZ select ── */
 function initTzSelect() {
   const sel = document.getElementById('tz-select')
   if (!sel) return
-  const allGroup = document.getElementById('tz-all')
   Intl.supportedValuesOf('timeZone').forEach(tz => {
-    const opt = document.createElement('option')
-    opt.value = tz; opt.textContent = tz
-    allGroup.appendChild(opt)
+    const opt = document.createElement('option'); opt.value = tz; opt.textContent = tz
+    document.getElementById('tz-all').appendChild(opt)
   })
   sel.value = prefs.tz || 'auto'
   sel.addEventListener('change', () => { prefs.tz = sel.value; savePrefs(); render() })
 }
 
-/* ── Controls init ── */
+/* ── Controls ── */
 function initControls() {
-  // Conference filter
+  // Sport toggle
+  document.querySelectorAll('[data-sport]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.sport === prefs.sport)
+    btn.addEventListener('click', async () => {
+      document.querySelectorAll('[data-sport]').forEach(b => b.classList.remove('active'))
+      btn.classList.add('active')
+      prefs.sport = btn.dataset.sport
+      prefs.myTeam = null  // clear MyTeam on sport switch
+      prefs.conference = 'all'
+      savePrefs(); applyTheme()
+      document.getElementById('updated').textContent = 'Loading…'
+      await fetchSchedule(); render()
+    })
+  })
+
   document.querySelectorAll('[data-conf]').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.conf === prefs.conference)
     btn.addEventListener('click', () => {
       document.querySelectorAll('[data-conf]').forEach(b => b.classList.remove('active'))
-      btn.classList.add('active')
-      prefs.conference = btn.dataset.conf
-      savePrefs()
-      render()
+      btn.classList.add('active'); prefs.conference = btn.dataset.conf; savePrefs(); render()
     })
   })
 
-  // Status filter
   document.querySelectorAll('[data-status]').forEach(btn => {
     btn.classList.toggle('active', prefs.statusFilter.includes(btn.dataset.status))
     btn.addEventListener('click', () => {
       const s = btn.dataset.status
       if (prefs.statusFilter.includes(s)) prefs.statusFilter = prefs.statusFilter.filter(x => x !== s)
       else prefs.statusFilter.push(s)
-      btn.classList.toggle('active', prefs.statusFilter.includes(s))
-      savePrefs()
-      render()
+      btn.classList.toggle('active', prefs.statusFilter.includes(s)); savePrefs(); render()
     })
   })
 
-  // Toggles
   const toggleMap = {
     'toggle-scores':       ['showScores',    () => render()],
     'toggle-venue':        ['showVenue',      () => render()],
@@ -829,23 +753,16 @@ function initControls() {
     el.addEventListener('change', () => { prefs[key] = el.checked; savePrefs(); cb() })
   }
 
-  // Search
   document.getElementById('search')?.addEventListener('input', render)
-
-  // Refresh
   document.getElementById('refresh-btn')?.addEventListener('click', async () => {
     document.getElementById('updated').textContent = 'Refreshing…'
     await fetch('/api/refresh', { method: 'POST' })
-    await fetchSchedule()
-    render()
+    await fetchSchedule(); render()
   })
-
-  // Filters toggle (mobile)
   document.getElementById('filters-toggle')?.addEventListener('click', () => {
     document.getElementById('controls-secondary')?.classList.toggle('open')
   })
 
-  // Favorites
   const favToggle = document.getElementById('favorites-toggle')
   const favPanel  = document.getElementById('favorites-panel')
   favToggle?.addEventListener('click', () => {
@@ -853,7 +770,6 @@ function initControls() {
     if (!favPanel?.classList.contains('hidden')) buildFavoritesPanel()
   })
 
-  // Players
   const playersToggle = document.getElementById('players-toggle')
   const playersPanel  = document.getElementById('players-panel')
   playersToggle?.addEventListener('click', () => {
@@ -861,23 +777,14 @@ function initControls() {
     if (!playersPanel?.classList.contains('hidden')) buildPlayersPanel()
   })
 
-  // Saved toggle
   document.getElementById('saved-toggle')?.addEventListener('click', () => {
-    prefs.savedOnly = !prefs.savedOnly
-    savePrefs()
-    render()
+    prefs.savedOnly = !prefs.savedOnly; savePrefs(); render()
   })
 }
 
 /* ── Boot ── */
 async function init() {
-  loadPrefs()
-  applyTheme()
-  initControls()
-  initViewToggle()
-  initTzSelect()
-  await fetchSchedule()
-  render()
+  loadPrefs(); applyTheme(); initControls(); initViewToggle(); initTzSelect()
+  await fetchSchedule(); render()
 }
-
 init()

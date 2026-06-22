@@ -4,12 +4,14 @@ import { dirname, join, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execFile } from 'node:child_process'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const PUBLIC_DIR  = join(__dirname, 'public')
-const DATA_FILE   = join(__dirname, 'data', 'schedule.json')
-const CHANGES_FILE= join(__dirname, 'data', 'changes.json')
-const ARCHIVE_FILE= join(__dirname, 'data', 'archive.json')
-const SCRAPER     = join(__dirname, 'scraper.mjs')
+const __dirname    = dirname(fileURLToPath(import.meta.url))
+const PUBLIC_DIR   = join(__dirname, 'public')
+const DATA_FILE    = join(__dirname, 'data', 'schedule.json')
+const CHANGES_FILE = join(__dirname, 'data', 'changes.json')
+const ARCHIVE_FILE = join(__dirname, 'data', 'archive.json')
+const WNBA_FILE    = join(__dirname, 'data', 'wnba-schedule.json')
+const WNBA_ARCHIVE = join(__dirname, 'data', 'wnba-archive.json')
+const SCRAPER      = join(__dirname, 'scraper.mjs')
 const PORT        = 4881
 const REFRESH_MS  = 10 * 60 * 1000
 const STALE_MS    = REFRESH_MS
@@ -89,6 +91,30 @@ const server = createServer(async (req, res) => {
   if (url.pathname === '/data/archive.json') {
     try {
       const body = await readFile(ARCHIVE_FILE)
+      res.writeHead(200, { 'Content-Type': 'application/json' })
+      res.end(body)
+    } catch {
+      res.writeHead(200, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ games: [] }))
+    }
+    return
+  }
+
+  if (url.pathname === '/data/wnba-schedule.json') {
+    try {
+      const body = await readFile(WNBA_FILE)
+      res.writeHead(200, { 'Content-Type': 'application/json' })
+      res.end(body)
+    } catch {
+      res.writeHead(200, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ games: [], generatedAt: null, errors: ['No WNBA data yet — click Refresh'] }))
+    }
+    return
+  }
+
+  if (url.pathname === '/data/wnba-archive.json') {
+    try {
+      const body = await readFile(WNBA_ARCHIVE)
       res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(body)
     } catch {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NBA Schedule</title>
+  <title>Basketball Schedule</title>
   <meta name="theme-color" content="#f76b1c" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -19,7 +19,7 @@
       <div class="app-brand">
         <img src="/logo.jpg" alt="" class="app-logo" />
         <div class="brand-text">
-          <h1>NBA Schedule</h1>
+          <h1 id="app-title">Basketball Schedule</h1>
           <div class="subtitle">spoiler-free</div>
         </div>
       </div>
@@ -38,6 +38,13 @@
   <div id="alert-banner" class="alert-banner hidden"></div>
 
   <nav class="controls" aria-label="Filters">
+
+    <div class="control-row" style="padding-bottom:0">
+      <div class="pill-group" id="sport-toggle">
+        <button class="pill active" data-sport="nba">NBA</button>
+        <button class="pill" data-sport="wnba">WNBA</button>
+      </div>
+    </div>
 
     <div class="control-row controls-top-bar">
       <div class="view-slider" id="view-toggle">
@@ -112,6 +119,6 @@
     Data via ESPN public API &middot; updates every 10 minutes &middot; <a href="/help.html" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;text-decoration:underline">Help</a>
   </footer>
 
-  <script src="/app.js?v=2"></script>
+  <script src="/app.js?v=3"></script>
 </body>
 </html>

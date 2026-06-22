@@ -3,19 +3,15 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const OUT_FILE     = join(__dirname, 'data', 'schedule.json')
-const CHANGES_FILE = join(__dirname, 'data', 'changes.json')
-const ARCHIVE_FILE = join(__dirname, 'data', 'archive.json')
-const CHANGES_MAX_AGE_MS = 14 * 24 * 60 * 60 * 1000
+const DATA_DIR        = join(__dirname, 'data')
+const OUT_FILE        = join(DATA_DIR, 'schedule.json')
+const ARCHIVE_FILE    = join(DATA_DIR, 'archive.json')
+const CHANGES_FILE    = join(DATA_DIR, 'changes.json')
+const WNBA_FILE       = join(DATA_DIR, 'wnba-schedule.json')
+const WNBA_ARCHIVE    = join(DATA_DIR, 'wnba-archive.json')
+const CHANGES_MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000
 
-// NBA regular season + playoffs + preseason all come through the same endpoint.
-// ESPN differentiates via seasontype param (1=pre, 2=regular, 3=post) but omitting
-// it returns everything, which is what we want.
-const LEAGUES = [
-  { code: 'nba', name: 'NBA', path: 'basketball/nba' },
-]
-
-const DAYS_BACK    = 14
+const DAYS_BACK    = 90
 const DAYS_FORWARD = 21
 
 function ymd(date) { return date.toISOString().slice(0, 10).replace(/-/g, '') }
@@ -89,10 +85,11 @@ function updateChanges(prevGames, newGames, existingChanges) {
   return [...changesById.values()].sort((a, b) => new Date(a.newDate) - new Date(b.newDate))
 }
 
-async function fetchLeague(league, from, to) {
-  const url = `https://site.api.espn.com/apis/site/v2/sports/${league.path}/scoreboard?dates=${from}-${to}&limit=500`
-  const res = await fetch(url, { headers: { 'User-Agent': 'nba-schedule-app/1.0 (personal use)' } })
-  if (!res.ok) throw new Error(`${league.name}: HTTP ${res.status}`)
+async function fetchLeague(leagueCode, leagueName, from, to) {
+  const path = `basketball/${leagueCode}`
+  const url  = `https://site.api.espn.com/apis/site/v2/sports/${path}/scoreboard?dates=${from}-${to}&limit=500`
+  const res  = await fetch(url, { headers: { 'User-Agent': 'basketball-schedule-app/1.0 (personal use)' } })
+  if (!res.ok) throw new Error(`${leagueName}: HTTP ${res.status}`)
   const data = await res.json()
 
   return (data.events || []).map(ev => {
@@ -100,14 +97,12 @@ async function fetchLeague(league, from, to) {
     const home = comp.competitors?.find(c => c.homeAway === 'home')
     const away = comp.competitors?.find(c => c.homeAway === 'away')
     const broadcasts = (comp.broadcasts || []).flatMap(b => b.names || []).filter(Boolean)
-
-    // Playoff series summary (e.g. "OKC leads 3-2")
     const series = comp.series?.summary || ev.seriesSummary?.description || null
 
     return {
       id:           ev.id,
-      league:       league.code,
-      leagueName:   league.name,
+      league:       leagueCode,
+      leagueName,
       date:         ev.date,
       status:       statusOf(comp),
       statusDetail: comp.status?.type?.shortDetail || comp.status?.type?.description || '',
@@ -123,47 +118,60 @@ async function fetchLeague(league, from, to) {
   })
 }
 
-async function main() {
-  const { from, to } = dateRange()
-  const results = await Promise.allSettled(LEAGUES.map(l => fetchLeague(l, from, to)))
-
-  let games = []
-  const errors = []
-  results.forEach((r, i) => {
-    if (r.status === 'fulfilled') games.push(...r.value)
-    else errors.push(`${LEAGUES[i].name}: ${r.reason.message}`)
-  })
-
-  games.sort((a, b) => new Date(a.date) - new Date(b.date))
-
-  const previous = await loadJson(OUT_FILE, null)
+async function writeLeague({ games, outFile, archiveFile, changesFile, leagueName, errors }) {
+  const previous = await loadJson(outFile, null)
   if (games.length === 0 && previous?.games?.length > 0) {
-    console.error(`All leagues failed (${errors.join('; ')}) — keeping previous data.`)
+    console.error(`${leagueName} fetch failed (${errors.join('; ')}) — keeping previous data.`)
     return
   }
 
-  const previousChanges = await loadJson(CHANGES_FILE, { changes: [] })
-  const changes = updateChanges(previous?.games || [], games, previousChanges.changes || [])
-
-  const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - DAYS_BACK)
+  const cutoff    = new Date(); cutoff.setDate(cutoff.getDate() - DAYS_BACK)
   const currentIds = new Set(games.map(g => g.id))
-  const agedOut = (previous?.games || []).filter(g => !currentIds.has(g.id) && new Date(g.date) < cutoff)
+  const agedOut   = (previous?.games || []).filter(g => !currentIds.has(g.id) && new Date(g.date) < cutoff)
 
   if (agedOut.length) {
-    const archive = await loadJson(ARCHIVE_FILE, { games: [] })
+    const archive    = await loadJson(archiveFile, { games: [] })
     const archiveById = new Map((archive.games || []).map(g => [g.id, g]))
     for (const g of agedOut) archiveById.set(g.id, g)
     const archiveGames = [...archiveById.values()].sort((a, b) => new Date(b.date) - new Date(a.date))
-    await writeFile(ARCHIVE_FILE, JSON.stringify({ games: archiveGames }, null, 2))
-    console.log(`Archived ${agedOut.length} game(s) (${archiveGames.length} total)`)
+    await writeFile(archiveFile, JSON.stringify({ games: archiveGames }, null, 2))
+    console.log(`${leagueName}: archived ${agedOut.length} game(s) (${archiveGames.length} total)`)
   }
 
-  const payload = { generatedAt: new Date().toISOString(), range: { from, to }, errors, games }
-  await mkdir(dirname(OUT_FILE), { recursive: true })
-  await writeFile(OUT_FILE, JSON.stringify(payload, null, 2))
-  await writeFile(CHANGES_FILE, JSON.stringify({ generatedAt: payload.generatedAt, changes }, null, 2))
-  console.log(`Wrote ${games.length} games to ${OUT_FILE}${errors.length ? ` (errors: ${errors.join('; ')})` : ''}`)
-  console.log(`${changes.length} pending schedule-change alert(s)`)
+  let changesCount = 0
+  if (changesFile) {
+    const previousChanges = await loadJson(changesFile, { changes: [] })
+    const changes = updateChanges(previous?.games || [], games, previousChanges.changes || [])
+    changesCount = changes.length
+    await writeFile(changesFile, JSON.stringify({ generatedAt: new Date().toISOString(), changes }, null, 2))
+  }
+
+  const { from, to } = dateRange()
+  await writeFile(outFile, JSON.stringify({ generatedAt: new Date().toISOString(), range: { from, to }, errors, games }, null, 2))
+  console.log(`${leagueName}: wrote ${games.length} games${errors.length ? ` (errors: ${errors.join('; ')})` : ''}${changesFile ? ` · ${changesCount} schedule-change alert(s)` : ''}`)
+}
+
+async function main() {
+  await mkdir(DATA_DIR, { recursive: true })
+  const { from, to } = dateRange()
+
+  const [nbaResult, wnbaResult] = await Promise.allSettled([
+    fetchLeague('nba', 'NBA', from, to),
+    fetchLeague('wnba', 'WNBA', from, to),
+  ])
+
+  const nbaGames   = nbaResult.status  === 'fulfilled' ? nbaResult.value  : []
+  const wnbaGames  = wnbaResult.status === 'fulfilled' ? wnbaResult.value : []
+  const nbaErrors  = nbaResult.status  === 'rejected'  ? [nbaResult.reason.message]  : []
+  const wnbaErrors = wnbaResult.status === 'rejected'  ? [wnbaResult.reason.message] : []
+
+  nbaGames.sort((a, b) => new Date(a.date) - new Date(b.date))
+  wnbaGames.sort((a, b) => new Date(a.date) - new Date(b.date))
+
+  await Promise.all([
+    writeLeague({ games: nbaGames,  outFile: OUT_FILE,  archiveFile: ARCHIVE_FILE, changesFile: CHANGES_FILE, leagueName: 'NBA',  errors: nbaErrors }),
+    writeLeague({ games: wnbaGames, outFile: WNBA_FILE, archiveFile: WNBA_ARCHIVE, changesFile: null,         leagueName: 'WNBA', errors: wnbaErrors }),
+  ])
 }
 
 main().catch(err => { console.error('Scrape failed:', err); process.exit(1) })
