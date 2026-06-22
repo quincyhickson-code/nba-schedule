@@ -137,6 +137,8 @@ const server = createServer(async (req, res) => {
   }
 })
 
-await ensureFreshData()
-server.listen(PORT, () => console.log(`NBA Schedule running at http://localhost:${PORT}`))
+server.listen(PORT, () => {
+  console.log(`NBA Schedule running at http://localhost:${PORT}`)
+  ensureFreshData().catch(e => console.error('Initial data load failed:', e.message))
+})
 setInterval(() => refresh().catch(e => console.error('Periodic refresh failed:', e.message)), REFRESH_MS)

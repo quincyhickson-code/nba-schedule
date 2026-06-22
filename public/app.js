@@ -824,5 +824,10 @@ function initControls() {
 async function init() {
   loadPrefs(); applyTheme(); initControls(); initViewToggle(); initTzSelect()
   await fetchSchedule(); render()
+  if (allGames.length === 0 && !generatedAt) {
+    const el = document.getElementById('updated')
+    if (el) el.textContent = 'Warming up…'
+    setTimeout(async () => { await fetchSchedule(); render() }, 5000)
+  }
 }
 init()
