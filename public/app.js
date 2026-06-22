@@ -666,31 +666,17 @@ function buildPlayersPanel() {
 function buildFavoritesPanel() {
   const panel = document.getElementById('favorites-panel')
   if (!panel) return
-  const favs  = getFavTeams()
-  const teams = currentTeams().filter(t => favs.includes(t.abbrev))
-  const all   = [...teams, ...currentTeams().filter(t => !favs.includes(t.abbrev))]
-
-  if (!favs.length) {
-    panel.innerHTML = all.map(t => {
-      const logo = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
-      return `<div class="fav-team-row">
-        <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
-        <span class="fav-team-name">${t.name}</span>
-        <button class="fav-team-star" data-abbrev="${t.abbrev}" title="Favorite" style="color:var(--border)">★</button>
-      </div>`
-    }).join('')
-  } else {
-    panel.innerHTML = teams.map(t => {
-      const isMyT = getMyTeam() === t.abbrev
-      const logo  = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
-      return `<div class="fav-team-row">
-        <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
-        <span class="fav-team-name">${t.name}</span>
-        <button class="my-team-btn${isMyT?' active':''}" data-abbrev="${t.abbrev}">${isMyT?'★ My Team':'☆ My Team'}</button>
-        <button class="fav-team-star" data-abbrev="${t.abbrev}" title="Unfavorite">★</button>
-      </div>`
-    }).join('')
-  }
+  panel.innerHTML = currentTeams().map(t => {
+    const isFav = getFavTeams().includes(t.abbrev)
+    const isMyT = getMyTeam() === t.abbrev
+    const logo  = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
+    return `<div class="fav-team-row">
+      <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
+      <span class="fav-team-name">${t.name}</span>
+      <button class="my-team-btn${isMyT?' active':''}" data-abbrev="${t.abbrev}">${isMyT?'★ My Team':'☆ My Team'}</button>
+      <button class="fav-team-star" data-abbrev="${t.abbrev}" title="${isFav?'Unfavorite':'Favorite'}" style="${isFav?'':'color:var(--border)'}">★</button>
+    </div>`
+  }).join('')
 
   panel.querySelectorAll('.fav-team-star').forEach(btn => {
     btn.addEventListener('click', () => {
