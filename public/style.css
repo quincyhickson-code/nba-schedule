@@ -699,7 +699,11 @@ select:focus { border-color: var(--accent); }
 
   .game-card { padding: 8px 10px; gap: 8px; }
   .header { padding: 8px 12px; }
-  .brand-text h1 { font-size: 18px; }
+  .brand-text h1 { font-size: 14px; }
+  .subtitle { display: none; }
   .list { padding: 10px; }
   .venue-tag { display: none; }
+  .roster-pill { display: none; }
+  .team-record { white-space: nowrap; }
+  .updated { display: none; }
 }
