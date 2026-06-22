@@ -85,21 +85,44 @@ const PREF_DEFAULTS = {
   sport: 'nba', view: 'schedule', conference: 'all', statusFilter: [],
   showScores: false, showVenue: true, showBroadcast: true,
   hideWatched: false, showArchive: false,
-  myTeam: null, favTeams: [], favPlayers: [],
+  myTeamNba: null, myTeamWnba: null,
+  favTeamsNba: [], favTeamsWnba: [],
+  favPlayers: [],
   savedGames: [], watchedGames: [], tz: 'auto',
 }
 let prefs = { ...PREF_DEFAULTS }
 
 function loadPrefs() {
-  try { const s = localStorage.getItem(PREF_KEY); if (s) Object.assign(prefs, JSON.parse(s)) } catch {}
+  try {
+    const s = localStorage.getItem(PREF_KEY)
+    if (s) {
+      const saved = JSON.parse(s)
+      Object.assign(prefs, saved)
+      // one-time migration from old single myTeam/favTeams fields
+      if (saved.myTeam != null && prefs.myTeamNba === null) prefs.myTeamNba = saved.myTeam
+      if (Array.isArray(saved.favTeams) && saved.favTeams.length && !prefs.favTeamsNba.length) {
+        prefs.favTeamsNba = [...saved.favTeams]
+      }
+    }
+  } catch {}
 }
 function savePrefs() {
   try { localStorage.setItem(PREF_KEY, JSON.stringify(prefs)) } catch {}
 }
 
+/* ── Per-sport team helpers ── */
+function getMyTeam()   { return prefs.sport === 'wnba' ? prefs.myTeamWnba : prefs.myTeamNba }
+function setMyTeam(a)  { if (prefs.sport === 'wnba') prefs.myTeamWnba = a; else prefs.myTeamNba = a }
+function getFavTeams() { return prefs.sport === 'wnba' ? prefs.favTeamsWnba : prefs.favTeamsNba }
+function addFavTeam(a) { getFavTeams().push(a) }
+function removeFavTeam(a) {
+  if (prefs.sport === 'wnba') prefs.favTeamsWnba = prefs.favTeamsWnba.filter(x => x !== a)
+  else prefs.favTeamsNba = prefs.favTeamsNba.filter(x => x !== a)
+}
+
 /* ── My Team theming ── */
 function applyTheme() {
-  const t = teamByAbbrev(prefs.myTeam)
+  const t = teamByAbbrev(getMyTeam())
   const r = document.documentElement
   const defaultAccent = prefs.sport === 'wnba' ? '#c8102e' : '#f76b1c'
   const defaultAccent2 = prefs.sport === 'wnba' ? '#a00e28' : '#e05a0e'
@@ -211,8 +234,8 @@ function render() {
     byDay.get(k).push(g)
   }
 
-  const isFavTeam = abbrev => prefs.favTeams.includes(abbrev)
-  const isMyTeam  = abbrev => abbrev === prefs.myTeam
+  const isFavTeam = abbrev => getFavTeams().includes(abbrev)
+  const isMyTeam  = abbrev => abbrev === getMyTeam()
 
   let html = ''
   for (const [, dayGames] of byDay) {
@@ -630,10 +653,11 @@ function buildPlayersPanel() {
 function buildFavoritesPanel() {
   const panel = document.getElementById('favorites-panel')
   if (!panel) return
-  const teams   = currentTeams().filter(t => prefs.favTeams.includes(t.abbrev))
-  const all     = [...teams, ...currentTeams().filter(t => !prefs.favTeams.includes(t.abbrev))]
+  const favs  = getFavTeams()
+  const teams = currentTeams().filter(t => favs.includes(t.abbrev))
+  const all   = [...teams, ...currentTeams().filter(t => !favs.includes(t.abbrev))]
 
-  if (!prefs.favTeams.length) {
+  if (!favs.length) {
     panel.innerHTML = all.map(t => {
       const logo = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
       return `<div class="fav-team-row">
@@ -644,7 +668,7 @@ function buildFavoritesPanel() {
     }).join('')
   } else {
     panel.innerHTML = teams.map(t => {
-      const isMyT = prefs.myTeam === t.abbrev
+      const isMyT = getMyTeam() === t.abbrev
       const logo  = teamLogoCache.get(t.abbrev)?.logo || logoUrl(t.abbrev)
       return `<div class="fav-team-row">
         <img class="fav-team-logo" src="${logo}" alt="" onerror="this.style.display='none'" />
@@ -658,14 +682,14 @@ function buildFavoritesPanel() {
   panel.querySelectorAll('.fav-team-star').forEach(btn => {
     btn.addEventListener('click', () => {
       const abbrev = btn.dataset.abbrev
-      if (prefs.favTeams.includes(abbrev)) prefs.favTeams = prefs.favTeams.filter(a => a !== abbrev)
-      else prefs.favTeams.push(abbrev)
+      if (getFavTeams().includes(abbrev)) removeFavTeam(abbrev)
+      else addFavTeam(abbrev)
       savePrefs(); buildFavoritesPanel(); render()
     })
   })
   panel.querySelectorAll('.my-team-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      prefs.myTeam = prefs.myTeam === btn.dataset.abbrev ? null : btn.dataset.abbrev
+      setMyTeam(getMyTeam() === btn.dataset.abbrev ? null : btn.dataset.abbrev)
       savePrefs(); applyTheme(); buildFavoritesPanel(); render()
     })
   })
@@ -713,8 +737,9 @@ function initControls() {
       document.querySelectorAll('[data-sport]').forEach(b => b.classList.remove('active'))
       btn.classList.add('active')
       prefs.sport = btn.dataset.sport
-      prefs.myTeam = null  // clear MyTeam on sport switch
       prefs.conference = 'all'
+      // reset conference button UI to match
+      document.querySelectorAll('[data-conf]').forEach(b => b.classList.toggle('active', b.dataset.conf === 'all'))
       savePrefs(); applyTheme()
       document.getElementById('updated').textContent = 'Loading…'
       await fetchSchedule(); render()
